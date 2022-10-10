@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9da3d68976a54f47a1dea34dc7fbac75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9da3d68976a54f47a1dea34dc7fbac75" ></div>
+        
+</body>
+<script>    
+    
+            var map_9da3d68976a54f47a1dea34dc7fbac75 = L.map(
+                "map_9da3d68976a54f47a1dea34dc7fbac75",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var feature_group_d73626263c1445b7819d549571443427 = L.featureGroup(
+                {}
+            ).addTo(map_9da3d68976a54f47a1dea34dc7fbac75);
+        
+    
+            var circle_c06ec3eec0c6495ab504923fad3532bf = L.circle(
+                [38.021, 23.1352],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11846.201922979364, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d73626263c1445b7819d549571443427);
+        
+    
+        var popup_64bbf760df6d459cab995eabcd19821f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1aa07e1ee054e69917b773938764992 = $(`<div id="html_f1aa07e1ee054e69917b773938764992" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Region</th>       <td style="text-align:center">Attica</td>     </tr>     <tr>       <th style="text-align:left">Location</th>       <td style="text-align:center">Kineta-Geraneia</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.021</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.1352</td>     </tr>     <tr>       <th style="text-align:left">Spread</th>       <td style="text-align:center">56133.0</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2018-07-23 12:03:00</td>     </tr>     <tr>       <th style="text-align:left">End</th>       <td style="text-align:center">2018-08-02 19:30:00</td>     </tr>     <tr>       <th style="text-align:left">Cause</th>       <td style="text-align:center">Human negligence</td>     </tr>     <tr>       <th style="text-align:left">Start_year</th>       <td style="text-align:center">2018</td>     </tr>     <tr>       <th style="text-align:left">End_year</th>       <td style="text-align:center">2018</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_64bbf760df6d459cab995eabcd19821f.setContent(html_f1aa07e1ee054e69917b773938764992);
+        
+
+        circle_c06ec3eec0c6495ab504923fad3532bf.bindPopup(popup_64bbf760df6d459cab995eabcd19821f)
+        ;
+
+        
+    
+    
+            var circle_0d4544060a354dce8929ccd3e5d6a6e0 = L.circle(
+                [38.0436, 23.9783],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5647.787177293422, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d73626263c1445b7819d549571443427);
+        
+    
+        var popup_4b0e6c514f04447b83cdb0a495c9657d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b479ea974aa647cfa9b6341eb0947011 = $(`<div id="html_b479ea974aa647cfa9b6341eb0947011" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Region</th>       <td style="text-align:center">Attica</td>     </tr>     <tr>       <th style="text-align:left">Location</th>       <td style="text-align:center">Daou Penteli-Neos Voutzas-Mati</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.0436</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.9783</td>     </tr>     <tr>       <th style="text-align:left">Spread</th>       <td style="text-align:center">12759.0</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2018-07-23 16:41:00</td>     </tr>     <tr>       <th style="text-align:left">End</th>       <td style="text-align:center">2018-09-10 09:04:00</td>     </tr>     <tr>       <th style="text-align:left">Cause</th>       <td style="text-align:center">Human negligence</td>     </tr>     <tr>       <th style="text-align:left">Start_year</th>       <td style="text-align:center">2018</td>     </tr>     <tr>       <th style="text-align:left">End_year</th>       <td style="text-align:center">2018</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_4b0e6c514f04447b83cdb0a495c9657d.setContent(html_b479ea974aa647cfa9b6341eb0947011);
+        
+
+        circle_0d4544060a354dce8929ccd3e5d6a6e0.bindPopup(popup_4b0e6c514f04447b83cdb0a495c9657d)
+        ;
+
+        
+    
+    
+            map_9da3d68976a54f47a1dea34dc7fbac75.fitBounds(
+                [[38.021, 23.1352], [38.0436, 23.9783]],
+                {}
+            );
+        
+    
+            var tile_layer_8d63e9c0cf05472283d6eee36880dd0e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9da3d68976a54f47a1dea34dc7fbac75);
+        
+    
+            var tile_layer_48056221b67c4283a07e53aef9cfa05c = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9da3d68976a54f47a1dea34dc7fbac75);
+        
+    
+            var layer_control_a14c9d459c37459a871e705a7094dcda = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_8d63e9c0cf05472283d6eee36880dd0e,
+                    "stamenterrain" : tile_layer_48056221b67c4283a07e53aef9cfa05c,
+                },
+                overlays :  {
+                    "2018" : feature_group_d73626263c1445b7819d549571443427,
+                },
+            };
+            L.control.layers(
+                layer_control_a14c9d459c37459a871e705a7094dcda.base_layers,
+                layer_control_a14c9d459c37459a871e705a7094dcda.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_9da3d68976a54f47a1dea34dc7fbac75);
+            tile_layer_48056221b67c4283a07e53aef9cfa05c.remove();
+        
+</script>

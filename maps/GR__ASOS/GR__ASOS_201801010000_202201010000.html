@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8b02929cc653479a9992adb70288acdb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_8b02929cc653479a9992adb70288acdb" ></div>
+        
+</body>
+<script>    
+    
+            var map_8b02929cc653479a9992adb70288acdb = L.map(
+                "map_8b02929cc653479a9992adb70288acdb",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var feature_group_5d180eecc6ec43f7942018784cf6f59d = L.featureGroup(
+                {}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+        
+    
+            var circle_marker_8bcd97974b5e49ba8a866b00c38757bf = L.circleMarker(
+                [40.8562, 25.945],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_0b81a92fb17c4538835ba37692481928 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_231e4e70743d428198e042fc72737ebc = $(`<div id="html_231e4e70743d428198e042fc72737ebc" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">3.937641</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Alexandroupoli</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGAL</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1932</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">40.8562</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.945</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_0b81a92fb17c4538835ba37692481928.setContent(html_231e4e70743d428198e042fc72737ebc);
+        
+
+        circle_marker_8bcd97974b5e49ba8a866b00c38757bf.bindPopup(popup_0b81a92fb17c4538835ba37692481928)
+        ;
+
+        
+    
+    
+            var circle_marker_a55920fb98744789a01c7ccd2691afa3 = L.circleMarker(
+                [37.9207, 21.2926],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_98d9cfafb46041ea8e99890d6973f709 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91ff70b2abde4e288b521a203b2827ac = $(`<div id="html_91ff70b2abde4e288b521a203b2827ac" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">12.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Andravida</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGAD</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1965</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.9207</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">21.2926</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_98d9cfafb46041ea8e99890d6973f709.setContent(html_91ff70b2abde4e288b521a203b2827ac);
+        
+
+        circle_marker_a55920fb98744789a01c7ccd2691afa3.bindPopup(popup_98d9cfafb46041ea8e99890d6973f709)
+        ;
+
+        
+    
+    
+            var circle_marker_b0082148d45741d99202e36ac9234f3d = L.circleMarker(
+                [37.9364, 23.9445],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_cca71597ea1643ba81056104ed0c966d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58a744efbb06476aad2915ce0649d7cf = $(`<div id="html_58a744efbb06476aad2915ce0649d7cf" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">94.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Athens</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGAV</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2004</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.9364</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.9445</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_cca71597ea1643ba81056104ed0c966d.setContent(html_58a744efbb06476aad2915ce0649d7cf);
+        
+
+        circle_marker_b0082148d45741d99202e36ac9234f3d.bindPopup(popup_cca71597ea1643ba81056104ed0c966d)
+        ;
+
+        
+    
+    
+            var circle_marker_5391a8e59c934206afbd934708fd062a = L.circleMarker(
+                [35.4833, 24.1167],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_413830d21fd74090b4894ce5ebe2e4f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf8522e936b3461b81e218ec40d2b72c = $(`<div id="html_cf8522e936b3461b81e218ec40d2b72c" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">135.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Chania</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSA</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1932</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">35.4833</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">24.1167</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_413830d21fd74090b4894ce5ebe2e4f9.setContent(html_cf8522e936b3461b81e218ec40d2b72c);
+        
+
+        circle_marker_5391a8e59c934206afbd934708fd062a.bindPopup(popup_413830d21fd74090b4894ce5ebe2e4f9)
+        ;
+
+        
+    
+    
+            var circle_marker_cfc8df48cb134f91abdca449ec097d03 = L.circleMarker(
+                [38.3432, 26.1406],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_2c3b8905942b453f99797c7a5741d815 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ecd957a35c84c5baadcc0c111ff9db5 = $(`<div id="html_3ecd957a35c84c5baadcc0c111ff9db5" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">4.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Chios</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGHI</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.3432</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">26.1406</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_2c3b8905942b453f99797c7a5741d815.setContent(html_3ecd957a35c84c5baadcc0c111ff9db5);
+        
+
+        circle_marker_cfc8df48cb134f91abdca449ec097d03.bindPopup(popup_2c3b8905942b453f99797c7a5741d815)
+        ;
+
+        
+    
+    
+            var circle_marker_a254821769d04bfebe10ab51f2b2765a = L.circleMarker(
+                [37.0833, 25.3667],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_7ebe73347ce045e38e952cbf8dd5aca1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b48449dfc2d4bf4a72a4e51c2e398dd = $(`<div id="html_5b48449dfc2d4bf4a72a4e51c2e398dd" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">4.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Cyclades Islands</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGNX</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2004</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.0833</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.3667</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_7ebe73347ce045e38e952cbf8dd5aca1.setContent(html_5b48449dfc2d4bf4a72a4e51c2e398dd);
+        
+
+        circle_marker_a254821769d04bfebe10ab51f2b2765a.bindPopup(popup_7ebe73347ce045e38e952cbf8dd5aca1)
+        ;
+
+        
+    
+    
+            var circle_marker_c71f7b6214d84bc1b0b57653790dc857 = L.circleMarker(
+                [38.0638, 23.556],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_f8af11ab5397494081542e4664158e31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4047f7d5bba4003983cb3ebd7892b5e = $(`<div id="html_c4047f7d5bba4003983cb3ebd7892b5e" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">31.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Elefsis</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGEL</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1965</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.0638</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.556</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_f8af11ab5397494081542e4664158e31.setContent(html_c4047f7d5bba4003983cb3ebd7892b5e);
+        
+
+        circle_marker_c71f7b6214d84bc1b0b57653790dc857.bindPopup(popup_f8af11ab5397494081542e4664158e31)
+        ;
+
+        
+    
+    
+            var circle_marker_55534310cbf441a58c13ed6b3716b61f = L.circleMarker(
+                [35.3397, 25.1803],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e0b3089f9d9e4a4ba65cec4f4e6f96f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28f0598f74e84b8589be2fd9b8b6630a = $(`<div id="html_28f0598f74e84b8589be2fd9b8b6630a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">39.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Heraklion</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGIR</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1932</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">35.3397</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.1803</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e0b3089f9d9e4a4ba65cec4f4e6f96f9.setContent(html_28f0598f74e84b8589be2fd9b8b6630a);
+        
+
+        circle_marker_55534310cbf441a58c13ed6b3716b61f.bindPopup(popup_e0b3089f9d9e4a4ba65cec4f4e6f96f9)
+        ;
+
+        
+    
+    
+            var circle_marker_ed72ae1db5de46529d9aca3bfeeda2a5 = L.circleMarker(
+                [39.6964, 20.8225],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_4ac7353918c64da190472906b29c27d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e0ce8e64ded4197889d1e47b85edca3 = $(`<div id="html_6e0ce8e64ded4197889d1e47b85edca3" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">476.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Ioannina</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGIO</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1932</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.6964</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">20.8225</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_4ac7353918c64da190472906b29c27d7.setContent(html_6e0ce8e64ded4197889d1e47b85edca3);
+        
+
+        circle_marker_ed72ae1db5de46529d9aca3bfeeda2a5.bindPopup(popup_4ac7353918c64da190472906b29c27d7)
+        ;
+
+        
+    
+    
+            var circle_marker_f6b7003a51eb412c8930920b6591e8d6 = L.circleMarker(
+                [37.0683, 22.0255],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e1e22fae45be4005895f8fb1d3f701fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79c9de806c8143cf97323ab4d0d3951c = $(`<div id="html_79c9de806c8143cf97323ab4d0d3951c" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">8.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kalamata</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKL</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1973</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.0683</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">22.0255</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e1e22fae45be4005895f8fb1d3f701fb.setContent(html_79c9de806c8143cf97323ab4d0d3951c);
+        
+
+        circle_marker_f6b7003a51eb412c8930920b6591e8d6.bindPopup(popup_e1e22fae45be4005895f8fb1d3f701fb)
+        ;
+
+        
+    
+    
+            var circle_marker_5092acade5a0492cae63a9259bd78bf6 = L.circleMarker(
+                [35.4214, 27.146],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_dc64ad778c584408ac6d8b1908ba0ccb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_abd936bb1d8a4081842adc77b30c6e0a = $(`<div id="html_abd936bb1d8a4081842adc77b30c6e0a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">20.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Karpathos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKP</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1998</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">35.4214</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">27.146</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_dc64ad778c584408ac6d8b1908ba0ccb.setContent(html_abd936bb1d8a4081842adc77b30c6e0a);
+        
+
+        circle_marker_5092acade5a0492cae63a9259bd78bf6.bindPopup(popup_dc64ad778c584408ac6d8b1908ba0ccb)
+        ;
+
+        
+    
+    
+            var circle_marker_4d2d95fa00d94e41abc43936ed636725 = L.circleMarker(
+                [40.9133, 24.6192],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e3be5784e4334fdaac5d804e763f2d87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e4f8692ed6e14f4a949295f40aa2f80c = $(`<div id="html_e4f8692ed6e14f4a949295f40aa2f80c" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">5.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kavala</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKV</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">40.9133</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">24.6192</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e3be5784e4334fdaac5d804e763f2d87.setContent(html_e4f8692ed6e14f4a949295f40aa2f80c);
+        
+
+        circle_marker_4d2d95fa00d94e41abc43936ed636725.bindPopup(popup_e3be5784e4334fdaac5d804e763f2d87)
+        ;
+
+        
+    
+    
+            var circle_marker_1bfc3a36eac742e69f0520acba880caf = L.circleMarker(
+                [38.1201, 20.5005],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_7f1c807d0f5a4888aff1c3f8c6935903 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59797c3de454440c8ebe586dc7f4a23c = $(`<div id="html_59797c3de454440c8ebe586dc7f4a23c" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">18.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Keffallinia</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKF</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1965</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.1201</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">20.5005</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_7f1c807d0f5a4888aff1c3f8c6935903.setContent(html_59797c3de454440c8ebe586dc7f4a23c);
+        
+
+        circle_marker_1bfc3a36eac742e69f0520acba880caf.bindPopup(popup_7f1c807d0f5a4888aff1c3f8c6935903)
+        ;
+
+        
+    
+    
+            var circle_marker_51aacb7f044849bcbafd7a8bb2ffc6be = L.circleMarker(
+                [39.6167, 19.9167],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e06ac1ccb89e4a609c7af4625f285146 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f4cbf90f7a140d195af6ff3ec5ec573 = $(`<div id="html_0f4cbf90f7a140d195af6ff3ec5ec573" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">2.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kerkyra/corfu</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKR</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1932</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.6167</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">19.9167</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e06ac1ccb89e4a609c7af4625f285146.setContent(html_0f4cbf90f7a140d195af6ff3ec5ec573);
+        
+
+        circle_marker_51aacb7f044849bcbafd7a8bb2ffc6be.bindPopup(popup_e06ac1ccb89e4a609c7af4625f285146)
+        ;
+
+        
+    
+    
+            var circle_marker_9056462cb2664edab647a62081bbd883 = L.circleMarker(
+                [36.2743, 23.017],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_20ac2cb66d4c4441b6ea36dd6bc9a9a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da46d6f1958d470c8d6a1891a7a5629e = $(`<div id="html_da46d6f1958d470c8d6a1891a7a5629e" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">319.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kithira</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKC</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1933</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">36.2743</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.017</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_20ac2cb66d4c4441b6ea36dd6bc9a9a7.setContent(html_da46d6f1958d470c8d6a1891a7a5629e);
+        
+
+        circle_marker_9056462cb2664edab647a62081bbd883.bindPopup(popup_20ac2cb66d4c4441b6ea36dd6bc9a9a7)
+        ;
+
+        
+    
+    
+            var circle_marker_2b3d7b09538f47c6a79b71c94e456995 = L.circleMarker(
+                [36.8007, 27.0908],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_98a299c6f926475fb18b1299ea623918 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42262d09ea6744c091f5d9fd396aef22 = $(`<div id="html_42262d09ea6744c091f5d9fd396aef22" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">125.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKO</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1982</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">36.8007</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">27.0908</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_98a299c6f926475fb18b1299ea623918.setContent(html_42262d09ea6744c091f5d9fd396aef22);
+        
+
+        circle_marker_2b3d7b09538f47c6a79b71c94e456995.bindPopup(popup_98a299c6f926475fb18b1299ea623918)
+        ;
+
+        
+    
+    
+            var circle_marker_0ffe7cbf3e6d4917a41199a5a66944a6 = L.circleMarker(
+                [40.3, 21.7833],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_58e9afdf21f440cfaba514b02298359d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4ba78ca73694d848ab33004311fdde6 = $(`<div id="html_a4ba78ca73694d848ab33004311fdde6" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">628.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Kozani</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGKZ</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1938</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">40.3</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">21.7833</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_58e9afdf21f440cfaba514b02298359d.setContent(html_a4ba78ca73694d848ab33004311fdde6);
+        
+
+        circle_marker_0ffe7cbf3e6d4917a41199a5a66944a6.bindPopup(popup_58e9afdf21f440cfaba514b02298359d)
+        ;
+
+        
+    
+    
+            var circle_marker_c8621bc5d3f147f6b33adbaa3d9aca7c = L.circleMarker(
+                [39.9171, 25.2363],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_5d8ea06d683c4ed89d4353e129a90d85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a1fecc3f24148d680f8f0e970eb15b3 = $(`<div id="html_6a1fecc3f24148d680f8f0e970eb15b3" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">5.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Limnos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGLM</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1977</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.9171</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.2363</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_5d8ea06d683c4ed89d4353e129a90d85.setContent(html_6a1fecc3f24148d680f8f0e970eb15b3);
+        
+
+        circle_marker_c8621bc5d3f147f6b33adbaa3d9aca7c.bindPopup(popup_5d8ea06d683c4ed89d4353e129a90d85)
+        ;
+
+        
+    
+    
+            var circle_marker_2fcdbd826eba43ad8fc529d3b1b2e533 = L.circleMarker(
+                [37.4333, 25.35],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_fd20019e48584fb992cf920c95509893 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2377048dd99a4a1c86d31376d45a815f = $(`<div id="html_2377048dd99a4a1c86d31376d45a815f" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">123.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Mykonos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGMK</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.4333</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.35</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_fd20019e48584fb992cf920c95509893.setContent(html_2377048dd99a4a1c86d31376d45a815f);
+        
+
+        circle_marker_2fcdbd826eba43ad8fc529d3b1b2e533.bindPopup(popup_fd20019e48584fb992cf920c95509893)
+        ;
+
+        
+    
+    
+            var circle_marker_c0c75b62974449739b153ffb13ff2b08 = L.circleMarker(
+                [39.0567, 26.5983],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e12a7cfe295e447394e493f91429e81e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e490a3cad1fc471fa74c284f68dbda13 = $(`<div id="html_e490a3cad1fc471fa74c284f68dbda13" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">17.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Mytilini</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGMT</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1960</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.0567</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">26.5983</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e12a7cfe295e447394e493f91429e81e.setContent(html_e490a3cad1fc471fa74c284f68dbda13);
+        
+
+        circle_marker_c0c75b62974449739b153ffb13ff2b08.bindPopup(popup_e12a7cfe295e447394e493f91429e81e)
+        ;
+
+        
+    
+    
+            var circle_marker_cafe2c8fa46d47679d6cd8daefaf1239 = L.circleMarker(
+                [39.2196, 22.7943],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e36745a69b234d50bae1626cd65eda14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90fbecb44f0a4f21b91b2696beb8db7f = $(`<div id="html_90fbecb44f0a4f21b91b2696beb8db7f" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">26.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Nea Anghialos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGBL</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1965</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.2196</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">22.7943</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e36745a69b234d50bae1626cd65eda14.setContent(html_90fbecb44f0a4f21b91b2696beb8db7f);
+        
+
+        circle_marker_cafe2c8fa46d47679d6cd8daefaf1239.bindPopup(popup_e36745a69b234d50bae1626cd65eda14)
+        ;
+
+        
+    
+    
+            var circle_marker_f94c5dbc7a2941249b85881abeace093 = L.circleMarker(
+                [35.53, 24.15],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_184cff72525646d792452075132deb5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a943da0797c5428eba93d8485234d02d = $(`<div id="html_a943da0797c5428eba93d8485234d02d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">141.74448</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">NSA Souda Bay</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">EQYG</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2018</td>     </tr>     <tr>       <th style="text-align:left">End</th>       <td style="text-align:center">2020</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">35.53</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">24.15</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_184cff72525646d792452075132deb5a.setContent(html_a943da0797c5428eba93d8485234d02d);
+        
+
+        circle_marker_f94c5dbc7a2941249b85881abeace093.bindPopup(popup_184cff72525646d792452075132deb5a)
+        ;
+
+        
+    
+    
+            var circle_marker_91f74225d9f04b83ac84e0362f14aaed = L.circleMarker(
+                [37.0103, 25.128],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_12b6961afc7f46748a4f0d42ef34d454 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9372e5c0e80e4d298dac3c9e9b8b2e53 = $(`<div id="html_9372e5c0e80e4d298dac3c9e9b8b2e53" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">36.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Paros</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGPA</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2004</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.0103</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.128</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_12b6961afc7f46748a4f0d42ef34d454.setContent(html_9372e5c0e80e4d298dac3c9e9b8b2e53);
+        
+
+        circle_marker_91f74225d9f04b83ac84e0362f14aaed.bindPopup(popup_12b6961afc7f46748a4f0d42ef34d454)
+        ;
+
+        
+    
+    
+            var circle_marker_0e608a4e6bd8490584d3fcfad9af7ba8 = L.circleMarker(
+                [38.1511, 21.4256],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_925491307a8f4a06a30c6658226f2be2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16464bc10d3549268a8190b5b8753b15 = $(`<div id="html_16464bc10d3549268a8190b5b8753b15" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">15.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Patras</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGRX</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1942</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.1511</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">21.4256</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_925491307a8f4a06a30c6658226f2be2.setContent(html_16464bc10d3549268a8190b5b8753b15);
+        
+
+        circle_marker_0e608a4e6bd8490584d3fcfad9af7ba8.bindPopup(popup_925491307a8f4a06a30c6658226f2be2)
+        ;
+
+        
+    
+    
+            var circle_marker_0cce4cdc04fd43e28a4936d8fa354b88 = L.circleMarker(
+                [38.6167, 20.7667],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_cf1e4eb94e3e4a809ea077eb9f53f472 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7775cfd152b64717b2eab62fbbcef953 = $(`<div id="html_7775cfd152b64717b2eab62fbbcef953" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">4.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Preveza</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGPZ</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1972</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.6167</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">20.7667</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_cf1e4eb94e3e4a809ea077eb9f53f472.setContent(html_7775cfd152b64717b2eab62fbbcef953);
+        
+
+        circle_marker_0cce4cdc04fd43e28a4936d8fa354b88.bindPopup(popup_cf1e4eb94e3e4a809ea077eb9f53f472)
+        ;
+
+        
+    
+    
+            var circle_marker_8f1169c1d34948af9883a417a7423b71 = L.circleMarker(
+                [36.4054, 28.0862],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_03a198935f75430e96c80e6a1a3f641b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbad6f51a5964084a48839bbf23f8c29 = $(`<div id="html_dbad6f51a5964084a48839bbf23f8c29" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">5.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Rhodos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGRP</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1935</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">36.4054</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">28.0862</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_03a198935f75430e96c80e6a1a3f641b.setContent(html_dbad6f51a5964084a48839bbf23f8c29);
+        
+
+        circle_marker_8f1169c1d34948af9883a417a7423b71.bindPopup(popup_03a198935f75430e96c80e6a1a3f641b)
+        ;
+
+        
+    
+    
+            var circle_marker_7bf0e4e6907a4d9d936309c595832a46 = L.circleMarker(
+                [37.69, 26.9117],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_96461ab688974164a9051089694f87af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd4d4370fe8c45068905b600a5ebbf04 = $(`<div id="html_fd4d4370fe8c45068905b600a5ebbf04" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">6.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Samos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSM</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1978</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.69</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">26.9117</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_96461ab688974164a9051089694f87af.setContent(html_fd4d4370fe8c45068905b600a5ebbf04);
+        
+
+        circle_marker_7bf0e4e6907a4d9d936309c595832a46.bindPopup(popup_96461ab688974164a9051089694f87af)
+        ;
+
+        
+    
+    
+            var circle_marker_8a6334002b4f4443872fec41f71b21b3 = L.circleMarker(
+                [39.1771, 23.5037],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_df2df39013054478b6320ce72d7de320 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9fd7095e5874b39be3ef3efb0875226 = $(`<div id="html_d9fd7095e5874b39be3ef3efb0875226" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">15.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Skiathos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSK</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">39.1771</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.5037</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_df2df39013054478b6320ce72d7de320.setContent(html_d9fd7095e5874b39be3ef3efb0875226);
+        
+
+        circle_marker_8a6334002b4f4443872fec41f71b21b3.bindPopup(popup_df2df39013054478b6320ce72d7de320)
+        ;
+
+        
+    
+    
+            var circle_marker_cdfc9aff8ce64d63bbdc77ac426b514c = L.circleMarker(
+                [38.9676, 24.4872],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_e833cfacd82a48879390bda5d153a590 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b48a156345924b32ad3c77cd93ce00f5 = $(`<div id="html_b48a156345924b32ad3c77cd93ce00f5" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">15.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Skiros</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSY</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1949</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.9676</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">24.4872</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_e833cfacd82a48879390bda5d153a590.setContent(html_b48a156345924b32ad3c77cd93ce00f5);
+        
+
+        circle_marker_cdfc9aff8ce64d63bbdc77ac426b514c.bindPopup(popup_e833cfacd82a48879390bda5d153a590)
+        ;
+
+        
+    
+    
+            var circle_marker_e9b9a29d83a2471193fd7d2d781730ab = L.circleMarker(
+                [37.4228, 24.9509],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_f19dea5be7e14031af301d960b8d54f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_420314ab23604459b6cfa3040960ae11 = $(`<div id="html_420314ab23604459b6cfa3040960ae11" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">72.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Syros Island</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSO</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1998</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.4228</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">24.9509</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_f19dea5be7e14031af301d960b8d54f8.setContent(html_420314ab23604459b6cfa3040960ae11);
+        
+
+        circle_marker_e9b9a29d83a2471193fd7d2d781730ab.bindPopup(popup_f19dea5be7e14031af301d960b8d54f8)
+        ;
+
+        
+    
+    
+            var circle_marker_f8ab15ec5aca4d10881fa4e05dc41718 = L.circleMarker(
+                [40.5197, 22.971],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_b391ff490fb94419aedf6cde8526aece = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cbe094e84b64163a2ca63151669650a = $(`<div id="html_2cbe094e84b64163a2ca63151669650a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">7.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Thessaloniki</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGTS</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1960</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">40.5197</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">22.971</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_b391ff490fb94419aedf6cde8526aece.setContent(html_2cbe094e84b64163a2ca63151669650a);
+        
+
+        circle_marker_f8ab15ec5aca4d10881fa4e05dc41718.bindPopup(popup_b391ff490fb94419aedf6cde8526aece)
+        ;
+
+        
+    
+    
+            var circle_marker_988911aa69fe42f4b6ba5bb5012090dc = L.circleMarker(
+                [36.3992, 25.4793],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_8618527c44e044c3ac2616ca4d0d1425 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63bd2db3d19e4b309b74da78eec2329d = $(`<div id="html_63bd2db3d19e4b309b74da78eec2329d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">40.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Thira</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGSR</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">36.3992</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">25.4793</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_8618527c44e044c3ac2616ca4d0d1425.setContent(html_63bd2db3d19e4b309b74da78eec2329d);
+        
+
+        circle_marker_988911aa69fe42f4b6ba5bb5012090dc.bindPopup(popup_8618527c44e044c3ac2616ca4d0d1425)
+        ;
+
+        
+    
+    
+            var circle_marker_f97033de3e044c22b498fafe11a7b575 = L.circleMarker(
+                [37.7508, 20.8842],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 4}
+            ).addTo(feature_group_5d180eecc6ec43f7942018784cf6f59d);
+        
+    
+        var popup_7f8b85b9e2e0424fa982bcb9f60871b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea934592455a4b78affa5d7a0ce65281 = $(`<div id="html_ea934592455a4b78affa5d7a0ce65281" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Elevation</th>       <td style="text-align:center">3.0</td>     </tr>     <tr>       <th style="text-align:left">Name</th>       <td style="text-align:center">Zakynthos</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Timezone</th>       <td style="text-align:center">Europe/Athens</td>     </tr>     <tr>       <th style="text-align:left">ID</th>       <td style="text-align:center">LGZA</td>     </tr>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">1991</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">37.7508</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">20.8842</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_7f8b85b9e2e0424fa982bcb9f60871b4.setContent(html_ea934592455a4b78affa5d7a0ce65281);
+        
+
+        circle_marker_f97033de3e044c22b498fafe11a7b575.bindPopup(popup_7f8b85b9e2e0424fa982bcb9f60871b4)
+        ;
+
+        
+    
+    
+            var feature_group_17f9497fb0074cb185fd716a8ae07b56 = L.featureGroup(
+                {}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+        
+    
+            var circle_2fb4be3d00b74ccdabc98032f5e377ca = L.circle(
+                [38.021, 23.1352],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11846.201922979364, "stroke": true, "weight": 3}
+            ).addTo(feature_group_17f9497fb0074cb185fd716a8ae07b56);
+        
+    
+        var popup_10c7aeccaaf44ab985ca2f88da07d67b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_40b92a53dfb44e62b0e0d189cf092c5a = $(`<div id="html_40b92a53dfb44e62b0e0d189cf092c5a" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Region</th>       <td style="text-align:center">Attica</td>     </tr>     <tr>       <th style="text-align:left">Location</th>       <td style="text-align:center">Kineta-Geraneia</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.021</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.1352</td>     </tr>     <tr>       <th style="text-align:left">Spread</th>       <td style="text-align:center">56133.0</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2018-07-23 12:03:00</td>     </tr>     <tr>       <th style="text-align:left">End</th>       <td style="text-align:center">2018-08-02 19:30:00</td>     </tr>     <tr>       <th style="text-align:left">Cause</th>       <td style="text-align:center">Human negligence</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_10c7aeccaaf44ab985ca2f88da07d67b.setContent(html_40b92a53dfb44e62b0e0d189cf092c5a);
+        
+
+        circle_2fb4be3d00b74ccdabc98032f5e377ca.bindPopup(popup_10c7aeccaaf44ab985ca2f88da07d67b)
+        ;
+
+        
+    
+    
+            var circle_25dbb17b510b427cb2046d1f2d061064 = L.circle(
+                [38.0436, 23.9783],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5647.787177293422, "stroke": true, "weight": 3}
+            ).addTo(feature_group_17f9497fb0074cb185fd716a8ae07b56);
+        
+    
+        var popup_4ed12f5485fe40d68fd16531b0b91504 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b630e4f0fc34a3095726d3dad4d46b7 = $(`<div id="html_7b630e4f0fc34a3095726d3dad4d46b7" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe">   <tbody>     <tr>       <th style="text-align:left">Network</th>       <td style="text-align:center">GR__ASOS</td>     </tr>     <tr>       <th style="text-align:left">Country</th>       <td style="text-align:center">GR</td>     </tr>     <tr>       <th style="text-align:left">Region</th>       <td style="text-align:center">Attica</td>     </tr>     <tr>       <th style="text-align:left">Location</th>       <td style="text-align:center">Daou Penteli-Neos Voutzas-Mati</td>     </tr>     <tr>       <th style="text-align:left">Latitude</th>       <td style="text-align:center">38.0436</td>     </tr>     <tr>       <th style="text-align:left">Longitudeitude</th>       <td style="text-align:center">23.9783</td>     </tr>     <tr>       <th style="text-align:left">Spread</th>       <td style="text-align:center">12759.0</td>     </tr>     <tr>       <th style="text-align:left">Start</th>       <td style="text-align:center">2018-07-23 16:41:00</td>     </tr>     <tr>       <th style="text-align:left">End</th>       <td style="text-align:center">2018-09-10 09:04:00</td>     </tr>     <tr>       <th style="text-align:left">Cause</th>       <td style="text-align:center">Human negligence</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_4ed12f5485fe40d68fd16531b0b91504.setContent(html_7b630e4f0fc34a3095726d3dad4d46b7);
+        
+
+        circle_25dbb17b510b427cb2046d1f2d061064.bindPopup(popup_4ed12f5485fe40d68fd16531b0b91504)
+        ;
+
+        
+    
+    
+            var feature_group_83d6e6f785e0479c83b3e5764f7e9716 = L.featureGroup(
+                {}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+        
+    
+            var poly_line_2edcb0bf06794628839c4a560886bfb3 = L.polyline(
+                [[38.021, 23.1352], [38.0638, 23.556]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_83d6e6f785e0479c83b3e5764f7e9716);
+        
+    
+            var poly_line_aceb3a130630429d8397c1856d40d872 = L.polyline(
+                [[38.0436, 23.9783], [37.9364, 23.9445]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(feature_group_83d6e6f785e0479c83b3e5764f7e9716);
+        
+    
+            map_8b02929cc653479a9992adb70288acdb.fitBounds(
+                [[35.3397, 19.9167], [40.9133, 28.0862]],
+                {}
+            );
+        
+    
+            var tile_layer_6e8c6c472e964c9c8e06dd91dad2c0cf = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+        
+    
+            var tile_layer_8761b14811f34ea29312907cc00eb44f = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+        
+    
+            var layer_control_a083074b055241949a31ffe34092d295 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6e8c6c472e964c9c8e06dd91dad2c0cf,
+                    "stamenterrain" : tile_layer_8761b14811f34ea29312907cc00eb44f,
+                },
+                overlays :  {
+                    "Stations" : feature_group_5d180eecc6ec43f7942018784cf6f59d,
+                    "Fires" : feature_group_17f9497fb0074cb185fd716a8ae07b56,
+                    "Nearest Stations" : feature_group_83d6e6f785e0479c83b3e5764f7e9716,
+                },
+            };
+            L.control.layers(
+                layer_control_a083074b055241949a31ffe34092d295.base_layers,
+                layer_control_a083074b055241949a31ffe34092d295.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_8b02929cc653479a9992adb70288acdb);
+            tile_layer_8761b14811f34ea29312907cc00eb44f.remove();
+        
+</script>

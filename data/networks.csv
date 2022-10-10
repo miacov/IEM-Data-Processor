@@ -1,0 +1,264 @@
+network,network_name
+AF__ASOS,Afghanistan ASOS
+AL_ASOS,Alabama ASOS
+AK_ASOS,Alaska ASOS
+AL__ASOS,Albania ASOS
+CA_AB_ASOS,Alberta CA ASOS
+DZ__ASOS,Algeria ASOS
+AS__ASOS,American Samoa ASOS
+AO__ASOS,Angola ASOS
+AI__ASOS,Anguilla ASOS
+AQ__ASOS,Antarctica ASOS
+AG__ASOS,Antigua and Barbuda ASOS
+AR__ASOS,Argentina ASOS
+AZ_ASOS,Arizona ASOS
+AR_ASOS,Arkansas ASOS
+AM__ASOS,Armenia ASOS
+AW__ASOS,Aruba ASOS
+AU__ASOS,Australia ASOS
+AT__ASOS,Austria ASOS
+AZ__ASOS,Azerbaijan ASOS
+BS__ASOS,Bahamas ASOS
+BH__ASOS,Bahrain ASOS
+BD__ASOS,Bangladesh ASOS
+BB__ASOS,Barbados ASOS
+BY__ASOS,Belarus ASOS
+BE__ASOS,Belgium ASOS
+BZ__ASOS,Belize ASOS
+BJ__ASOS,Benin ASOS
+BM__ASOS,Bermuda ASOS
+BT__ASOS,Bhutan ASOS
+BO__ASOS,Bolivia ASOS
+BA__ASOS,Bosnia and Herzegovina ASOS
+BW__ASOS,Botswana ASOS
+BR__ASOS,Brazil ASOS
+CA_BC_ASOS,British Columbia CA ASOS
+IO__ASOS,British Indian Ocean Territory ASOS
+VG__ASOS,British Virgin Islands ASOS
+BG__ASOS,Bulgaria ASOS
+BF__ASOS,Burkina Faso ASOS
+BI__ASOS,Burundi ASOS
+CA_ASOS,California ASOS
+KH__ASOS,Cambodia ASOS
+CM__ASOS,Cameroon ASOS
+CV__ASOS,Cape Verde ASOS
+CF__ASOS,Central African Republic ASOS
+TD__ASOS,Chad ASOS
+CL__ASOS,Chile ASOS
+CN__ASOS,China ASOS
+CO__ASOS,Colombia ASOS
+CO_ASOS,Colorado ASOS
+KM__ASOS,Comoros ASOS
+CG__ASOS,Congo ASOS
+CT_ASOS,Connecticut ASOS
+CK__ASOS,Cook Islands ASOS
+CR__ASOS,Costa Rica ASOS
+HR__ASOS,Croatia ASOS
+CU__ASOS,Cuba ASOS
+CY__ASOS,Cyprus ASOS
+CZ__ASOS,Czech Republic ASOS
+DE_ASOS,Delaware ASOS
+CD__ASOS,Democratic Republic of the Congo ASOS
+DK__ASOS,Denmark ASOS
+DJ__ASOS,Djibouti ASOS
+DM__ASOS,Dominica ASOS
+DO__ASOS,Dominican Republic ASOS
+EC__ASOS,Ecuador ASOS
+EG__ASOS,Egypt ASOS
+SV__ASOS,El Salvador ASOS
+GQ__ASOS,Equatorial Guinea ASOS
+EE__ASOS,Estonia ASOS
+ET__ASOS,Ethiopia ASOS
+FK__ASOS,Falkland Islands ASOS
+FM__ASOS,Federated States of Micronesia ASOS
+FJ__ASOS,Fiji ASOS
+FI__ASOS,Finland ASOS
+FL_ASOS,Florida ASOS
+FR__ASOS,France ASOS
+PF__ASOS,French Polynesia ASOS
+GA__ASOS,Gabon ASOS
+GM__ASOS,Gambia ASOS
+GA_ASOS,Georgia ASOS
+GE__ASOS,Georgia (Country) ASOS
+DE__ASOS,Germany ASOS
+GH__ASOS,Ghana ASOS
+GI__ASOS,Gibraltar ASOS
+KY__ASOS,Grand Cayman ASOS
+GB__ASOS,Great Britain ASOS
+GR__ASOS,Greece ASOS
+GL__ASOS,Greenland ASOS
+GD__ASOS,Grenada ASOS
+GU_ASOS,Guam ASOS
+GT__ASOS,Guatemala ASOS
+GN__ASOS,Guinea ASOS
+GW__ASOS,Guinea-Bissau ASOS
+GY__ASOS,Guyana ASOS
+HT__ASOS,Haiti ASOS
+HI_ASOS,Hawaii ASOS
+HN__ASOS,Honduras ASOS
+HK__ASOS,Hong Kong ASOS
+HU__ASOS,Hungary ASOS
+IS__ASOS,Iceland ASOS
+ID_ASOS,Idaho ASOS
+IL_ASOS,Illinois ASOS
+IN__ASOS,India ASOS
+IN_ASOS,Indiana ASOS
+ID__ASOS,Indonesia ASOS
+IA_ASOS,Iowa ASOS
+IR__ASOS,Iran ASOS
+IQ__ASOS,Iraq ASOS
+IE__ASOS,Ireland ASOS
+IL__ASOS,Israel ASOS
+IT__ASOS,Italy ASOS
+CI__ASOS,Ivory Coast ASOS
+JM__ASOS,Jamaica ASOS
+JP__ASOS,Japan ASOS
+JO__ASOS,Jordan ASOS
+KS_ASOS,Kansas ASOS
+KZ__ASOS,Kazakhstan ASOS
+KY_ASOS,Kentucky ASOS
+KE__ASOS,Kenya ASOS
+KI__ASOS,Kiribati ASOS
+KW__ASOS,Kuwait ASOS
+LA__ASOS,Lao ASOS
+LV__ASOS,Latvia ASOS
+LB__ASOS,Lebanon ASOS
+LS__ASOS,Lesotho ASOS
+LR__ASOS,Liberia ASOS
+LY__ASOS,Libya ASOS
+LT__ASOS,Lithuania ASOS
+LA_ASOS,Louisiana ASOS
+LU__ASOS,Luxembourg ASOS
+MK__ASOS,Macedonia ASOS
+MG__ASOS,Madagascar ASOS
+ME_ASOS,Maine ASOS
+MW__ASOS,Malawi ASOS
+MY__ASOS,Malaysia ASOS
+MV__ASOS,Maldives ASOS
+ML__ASOS,Mali ASOS
+CA_MB_ASOS,Manitoba CA ASOS
+MH__ASOS,Marshall Islands ASOS
+MD_ASOS,Maryland ASOS
+MA_ASOS,Massachusetts ASOS
+MR__ASOS,Mauritania ASOS
+MU__ASOS,Mauritius ASOS
+MX__ASOS,Mexico ASOS
+MI_ASOS,Michigan ASOS
+MN_ASOS,Minnesota ASOS
+MS_ASOS,Mississippi ASOS
+MO_ASOS,Missouri ASOS
+MD__ASOS,Moldova ASOS
+MC__ASOS,Monaco ASOS
+MT_ASOS,Montana ASOS
+MA__ASOS,Morocco ASOS
+MZ__ASOS,Mozambique ASOS
+MM__ASOS,Myanmar ASOS
+NA__ASOS,Namibia ASOS
+NE_ASOS,Nebraska ASOS
+NP__ASOS,Nepal ASOS
+AN__ASOS,Netherlands Antilles ASOS
+NL__ASOS,Netherlands ASOS
+NV_ASOS,Nevada ASOS
+CA_NB_ASOS,New Brunswick CA ASOS
+NC__ASOS,New Caledonia ASOS
+CA_NF_ASOS,Newfoundland CA ASOS
+NH_ASOS,New Hampshire ASOS
+NJ_ASOS,New Jersey ASOS
+NM_ASOS,New Mexico ASOS
+NY_ASOS,New York ASOS
+NF__ASOS,New Zealand ASOS
+NI__ASOS,Nicaragua ASOS
+NE__ASOS,Niger ASOS
+NG__ASOS,Nigeria ASOS
+NC_ASOS,North Carolina ASOS
+ND_ASOS,North Dakota ASOS
+MP__ASOS,Northern Mariana Islands ASOS
+KP__ASOS,North Korea
+CA_NT_ASOS,Northwest Territories CA ASOS
+NO__ASOS,Norway ASOS
+CA_NS_ASOS,Nova Scotia CA ASOS
+CA_NU_ASOS,Nunavut Canada ASOS
+OH_ASOS,Ohio ASOS
+OK_ASOS,Oklahoma ASOS
+OM__ASOS,Oman ASOS
+CA_ON_ASOS,Ontario CA ASOS
+OR_ASOS,Oregon ASOS
+PK__ASOS,Pakistan ASOS
+PA__ASOS,Panama ASOS
+PG__ASOS,Papua New Guinea ASOS
+PY__ASOS,Paraguay ASOS
+PA_ASOS,Pennsylvania ASOS
+PE__ASOS,Peru ASOS
+PH__ASOS,Philippines ASOS
+PL__ASOS,Poland ASOS
+PT__ASOS,Portugal ASOS
+CA_PE_ASOS,Prince Edward Island Canada ASOS
+PR_ASOS,Puerto Rico ASOS
+QA__ASOS,Qatar ASOS
+CA_QC_ASOS,Quebec CA ASOS
+RI_ASOS,Rhode Island ASOS
+RO__ASOS,Romania ASOS
+RU__ASOS,Russian Federation ASOS
+RW__ASOS,Rwanda ASOS
+SH__ASOS,Saint Helena ASOS
+KN__ASOS,Saint Kitts and Nevis ASOS
+LC__ASOS,Saint Lucia ASOS
+VC__ASOS,Saint Vincent and the Grenadines ASOS
+WS__ASOS,Samoa ASOS
+ST__ASOS,Sao Tome and Principe ASOS
+CA_SK_ASOS,Saskatchewan CA ASOS
+SA__ASOS,Saudi Arabia ASOS
+SN__ASOS,Senegal ASOS
+RS__ASOS,Serbia and Montenegro ASOS
+SC__ASOS,Seychelles ASOS
+SL__ASOS,Sierra Leone ASOS
+SG__ASOS,Singapore ASOS
+SK__ASOS,Slovakia ASOS
+SI__ASOS,Slovenia ASOS
+SB__ASOS,Solomon Islands ASOS
+SO__ASOS,Somalia ASOS
+ZA__ASOS,South Africa ASOS
+SC_ASOS,South Carolina ASOS
+SD_ASOS,South Dakota ASOS
+KR__ASOS,South Korea ASOS
+ES__ASOS,Spain ASOS
+LK__ASOS,Sri Lanka ASOS
+SD__ASOS,Sudan ASOS
+SR__ASOS,Suriname ASOS
+SZ__ASOS,Swaziland ASOS
+SE__ASOS,Sweden ASOS
+CH__ASOS,Switzerland ASOS
+SY__ASOS,Syria ASOS
+TW__ASOS,Taiwan ASOS
+TJ__ASOS,Tajikistan ASOS
+TZ__ASOS,Tanzania ASOS
+TN_ASOS,Tennessee ASOS
+TX_ASOS,Texas ASOS
+TH__ASOS,Thailand ASOS
+TG__ASOS,Togo ASOS
+TO__ASOS,Tonga ASOS
+TT__ASOS,Trinidad and Tobago ASOS
+TN__ASOS,Tunisia ASOS
+TR__ASOS,Turkey ASOS
+TM__ASOS,Turkmenistan ASOS
+UG__ASOS,Uganda ASOS
+UA__ASOS,Ukraine ASOS
+AE__ASOS,United Arab Emirates ASOS
+UN__ASOS,Unknown / Classified Military ASOS
+UY__ASOS,Uruguay ASOS
+UT_ASOS,Utah ASOS
+UZ__ASOS,Uzbekistan ASOS
+VU__ASOS,Vanuatu ASOS
+VE__ASOS,Venezuela ASOS
+VT_ASOS,Vermont ASOS
+VN__ASOS,Viet Nam ASOS
+VA_ASOS,Virginia ASOS
+VI_ASOS,Virgin Islands ASOS
+WA_ASOS,Washington ASOS
+WV_ASOS,West Virginia ASOS
+WI_ASOS,Wisconsin ASOS
+WY_ASOS,Wyoming ASOS
+YE__ASOS,Yemen ASOS
+CA_YT_ASOS,Yukon Canada ASOS
+ZM__ASOS,Zambia ASOS
+ZW__ASOS,Zimbabwe ASOS
