@@ -1,0 +1,2 @@
+# ignore html files in language percentages
+*.html linguist-detectable=false
