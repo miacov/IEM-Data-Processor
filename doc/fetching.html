@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module fetching</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>fetching</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cfetching.py">c:\users\marios\pycharmprojects\iem_data_processor\fetching.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bs4.html">bs4</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="utils.html">utils</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-fetch_and_output_network_info"><strong>fetch_and_output_network_info</strong></a>()</dt><dd><tt>Fetches&nbsp;network&nbsp;info&nbsp;from&nbsp;the&nbsp;IEM&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;file.</tt></dd></dl>
+ <dl><dt><a name="-fetch_and_output_station_data"><strong>fetch_and_output_station_data</strong></a>(start_datetime, end_datetime, stations=None, report='', timezone='Etc/UTC', trace=False)</dt><dd><tt>Fetches&nbsp;station&nbsp;data&nbsp;from&nbsp;the&nbsp;IEM&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame&nbsp;to&nbsp;fetch&nbsp;data&nbsp;from&nbsp;each&nbsp;station&nbsp;in&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separate&nbsp;file,&nbsp;or&nbsp;None&nbsp;to&nbsp;fetch&nbsp;data&nbsp;from&nbsp;all&nbsp;stations&nbsp;up&nbsp;to&nbsp;a&nbsp;period&nbsp;of&nbsp;24&nbsp;hours&nbsp;in&nbsp;one&nbsp;file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(end_datetime&nbsp;parameter&nbsp;up&nbsp;to&nbsp;24&nbsp;hours&nbsp;after&nbsp;start_datetime&nbsp;parameter)<br>
+:param&nbsp;report:&nbsp;limit&nbsp;report&nbsp;types&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MADIS&nbsp;HFMETAR&nbsp;(5&nbsp;minute&nbsp;ASOS)&nbsp;if&nbsp;"frequent",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routine&nbsp;(once&nbsp;hourly)&nbsp;if&nbsp;"routine",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specials&nbsp;if&nbsp;"special",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routine&nbsp;and&nbsp;specials&nbsp;if&nbsp;"combined",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all&nbsp;reports&nbsp;otherwise<br>
+:param&nbsp;timezone:&nbsp;timezone&nbsp;for&nbsp;presentation&nbsp;of&nbsp;observation&nbsp;times<br>
+:param&nbsp;trace:&nbsp;trace&nbsp;reports&nbsp;represented&nbsp;with&nbsp;"0.0001"&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;represented&nbsp;with&nbsp;empty&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-fetch_and_output_station_info"><strong>fetch_and_output_station_info</strong></a>(networks)</dt><dd><tt>Fetches&nbsp;station&nbsp;info&nbsp;from&nbsp;ASOS&nbsp;networks&nbsp;in&nbsp;the&nbsp;IEM&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code,&nbsp;network&nbsp;code&nbsp;list,&nbsp;or&nbsp;network&nbsp;info&nbsp;DataFrame</tt></dd></dl>
+ <dl><dt><a name="-fetch_network_info"><strong>fetch_network_info</strong></a>()</dt><dd><tt>Fetches&nbsp;network&nbsp;info&nbsp;from&nbsp;the&nbsp;IEM.<br>
+&nbsp;<br>
+:return:&nbsp;network&nbsp;info&nbsp;DataFrame</tt></dd></dl>
+ <dl><dt><a name="-fetch_station_data"><strong>fetch_station_data</strong></a>(service, station='', duplicates=False, extra_columns=False, attempts=5, timeout=120, sleep=5)</dt><dd><tt>Fetches&nbsp;station&nbsp;data&nbsp;from&nbsp;the&nbsp;IEM.<br>
+&nbsp;<br>
+:param&nbsp;service:&nbsp;service&nbsp;URI&nbsp;string&nbsp;with&nbsp;fetching&nbsp;options<br>
+:param&nbsp;station:&nbsp;station&nbsp;id,&nbsp;if&nbsp;""&nbsp;fetch&nbsp;data&nbsp;from&nbsp;all&nbsp;stations&nbsp;up&nbsp;to&nbsp;a&nbsp;period&nbsp;of&nbsp;24&nbsp;hours<br>
+:param&nbsp;duplicates:&nbsp;allow&nbsp;samples&nbsp;from&nbsp;different&nbsp;report&nbsp;types&nbsp;to&nbsp;have&nbsp;the&nbsp;same&nbsp;timestamp&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;drop&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samples&nbsp;that&nbsp;have&nbsp;more&nbsp;nan&nbsp;values&nbsp;than&nbsp;their&nbsp;duplicates<br>
+:param&nbsp;extra_columns:&nbsp;include&nbsp;all&nbsp;columns&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;drop&nbsp;extra&nbsp;columns&nbsp;(METAR&nbsp;and&nbsp;snowdepth)<br>
+:param&nbsp;attempts:&nbsp;max&nbsp;number&nbsp;of&nbsp;attempts&nbsp;to&nbsp;download&nbsp;data<br>
+:param&nbsp;timeout:&nbsp;time&nbsp;in&nbsp;seconds&nbsp;before&nbsp;timeout&nbsp;for&nbsp;fetching<br>
+:param&nbsp;sleep:&nbsp;time&nbsp;in&nbsp;seconds&nbsp;to&nbsp;sleep&nbsp;after&nbsp;fetching&nbsp;fail<br>
+:return:&nbsp;station&nbsp;data&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;fetching&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-fetch_station_info"><strong>fetch_station_info</strong></a>(network, extra_columns=False, geojson=False)</dt><dd><tt>Fetches&nbsp;station&nbsp;info&nbsp;from&nbsp;an&nbsp;ASOS&nbsp;network&nbsp;in&nbsp;the&nbsp;IEM.<br>
+&nbsp;<br>
+:param&nbsp;network:&nbsp;network&nbsp;code<br>
+:param&nbsp;extra_columns:&nbsp;include&nbsp;all&nbsp;columns&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;drop&nbsp;extra&nbsp;columns<br>
+:param&nbsp;geojson:&nbsp;station&nbsp;info&nbsp;as&nbsp;GeoJSON&nbsp;dictionary&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;DataFrame<br>
+:return:&nbsp;station&nbsp;info&nbsp;DataFrame&nbsp;or&nbsp;GeoJSON&nbsp;dictionary&nbsp;or&nbsp;None&nbsp;if&nbsp;fetching&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-get_service"><strong>get_service</strong></a>(start_datetime, end_datetime, report='', timezone='Etc/UTC', trace=False, latlon=False, elevation=False)</dt><dd><tt>Makes&nbsp;a&nbsp;URI&nbsp;string&nbsp;with&nbsp;selected&nbsp;service&nbsp;options&nbsp;to&nbsp;use&nbsp;for&nbsp;data&nbsp;fetching.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;report:&nbsp;limit&nbsp;report&nbsp;types&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MADIS&nbsp;HFMETAR&nbsp;(5&nbsp;minute&nbsp;ASOS)&nbsp;if&nbsp;"frequent",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routine&nbsp;(once&nbsp;hourly)&nbsp;if&nbsp;"routine",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specials&nbsp;if&nbsp;"special",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routine&nbsp;and&nbsp;specials&nbsp;if&nbsp;"combined",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all&nbsp;reports&nbsp;otherwise<br>
+:param&nbsp;timezone:&nbsp;timezone&nbsp;for&nbsp;presentation&nbsp;of&nbsp;observation&nbsp;times<br>
+:param&nbsp;trace:&nbsp;trace&nbsp;reports&nbsp;represented&nbsp;with&nbsp;"0.0001"&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;represented&nbsp;with&nbsp;empty&nbsp;string<br>
+:param&nbsp;latlon:&nbsp;include&nbsp;station&nbsp;latitude&nbsp;and&nbsp;longitude&nbsp;as&nbsp;columns&nbsp;in&nbsp;reports<br>
+:param&nbsp;elevation:&nbsp;include&nbsp;station&nbsp;elevation&nbsp;as&nbsp;column&nbsp;in&nbsp;reports<br>
+:return:&nbsp;service&nbsp;URI&nbsp;string&nbsp;with&nbsp;fetching&nbsp;options</tt></dd></dl>
+</td></tr></table>
+</body></html>

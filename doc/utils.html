@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module utils</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>utils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cutils.py">c:\users\marios\pycharmprojects\iem_data_processor\utils.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+<a href="folium.html">folium</a><br>
+<a href="io.html">io</a><br>
+</td><td width="25%" valign=top><a href="joblib.html">joblib</a><br>
+<a href="json.html">json</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pandas.html">pandas</a><br>
+<a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="shutil.html">shutil</a><br>
+<a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-convert_args_to_strings"><strong>convert_args_to_strings</strong></a>(*args, **formats)</dt><dd><tt>Converts&nbsp;arguments&nbsp;to&nbsp;strings.<br>
+&nbsp;<br>
+:param&nbsp;args:&nbsp;variable&nbsp;number&nbsp;of&nbsp;arguments<br>
+:param&nbsp;formats:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;conversion&nbsp;formats,&nbsp;default&nbsp;values&nbsp;in&nbsp;()&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"datetime"&nbsp;for&nbsp;datetime&nbsp;datetime&nbsp;or&nbsp;pandas&nbsp;Timestamp&nbsp;(%Y%m%d%H%M),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date"&nbsp;for&nbsp;datetime&nbsp;date&nbsp;(%Y%m%d),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"time"&nbsp;for&nbsp;datetime&nbsp;time&nbsp;(%H%M),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"unsupported"&nbsp;for&nbsp;unsupported&nbsp;arguments&nbsp;("")<br>
+:return:&nbsp;string&nbsp;arguments&nbsp;list</tt></dd></dl>
+ <dl><dt><a name="-empty_directory"><strong>empty_directory</strong></a>(directory)</dt><dd><tt>Deletes&nbsp;contents&nbsp;from&nbsp;selected&nbsp;directory&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;<br>
+:param&nbsp;directory:&nbsp;directory&nbsp;to&nbsp;empty</tt></dd></dl>
+ <dl><dt><a name="-get_data_label"><strong>get_data_label</strong></a>(data)</dt><dd><tt>Classifies&nbsp;an&nbsp;object&nbsp;by&nbsp;its&nbsp;data&nbsp;type.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;object<br>
+:return:&nbsp;"list"&nbsp;for&nbsp;list,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tuple"&nbsp;for&nbsp;tuple,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"set"&nbsp;for&nbsp;set,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dict"&nbsp;for&nbsp;dictionary,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ndarray"&nbsp;for&nbsp;NumPy&nbsp;ndarray,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"df"&nbsp;for&nbsp;pandas&nbsp;DataFrame,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"series"&nbsp;for&nbsp;pandas&nbsp;Series,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"index"&nbsp;for&nbsp;pandas&nbsp;Index,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"datetime"&nbsp;for&nbsp;datetime&nbsp;datetime&nbsp;or&nbsp;pandas&nbsp;Timestamp,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date"&nbsp;for&nbsp;datetime&nbsp;date,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"time"&nbsp;for&nbsp;datetime&nbsp;time,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"timedelta"&nbsp;for&nbsp;datetime&nbsp;timedelta,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"str"&nbsp;for&nbsp;string&nbsp;(including&nbsp;NumPy),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bool"&nbsp;for&nbsp;boolean,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"int"&nbsp;for&nbsp;integer&nbsp;(including&nbsp;NumPy),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"float"&nbsp;for&nbsp;floating&nbsp;point&nbsp;(including&nbsp;NumPy),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"complex"&nbsp;for&nbsp;complex&nbsp;(including&nbsp;NumPy),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sklearn"&nbsp;for&nbsp;any&nbsp;scikit-learn&nbsp;object,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fig"&nbsp;for&nbsp;matplotlib&nbsp;Figure,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"map"&nbsp;for&nbsp;Folium&nbsp;Map<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"textio"&nbsp;for&nbsp;TextIOBase,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bufferedio"&nbsp;for&nbsp;BufferedIOBase,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"rawio"&nbsp;for&nbsp;RawIOBase,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-get_path_unit_label"><strong>get_path_unit_label</strong></a>(path)</dt><dd><tt>Classifies&nbsp;a&nbsp;path&nbsp;by&nbsp;its&nbsp;storage&nbsp;unit&nbsp;type.<br>
+&nbsp;<br>
+:param&nbsp;path:&nbsp;storage&nbsp;unit&nbsp;path<br>
+:return:&nbsp;"directory"&nbsp;for&nbsp;directory,&nbsp;"file"&nbsp;for&nbsp;file&nbsp;or&nbsp;symbolic&nbsp;link,&nbsp;""&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-get_station_data_descriptions"><strong>get_station_data_descriptions</strong></a>(column='', preprocessed=False, units=False)</dt><dd><tt>Returns&nbsp;descriptions&nbsp;for&nbsp;station&nbsp;data&nbsp;columns.<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;column&nbsp;name&nbsp;or&nbsp;""&nbsp;for&nbsp;all&nbsp;columns<br>
+:param&nbsp;preprocessed:&nbsp;descriptions&nbsp;for&nbsp;preprocessed&nbsp;station&nbsp;data&nbsp;instead&nbsp;of&nbsp;fetched&nbsp;data&nbsp;if&nbsp;True<br>
+:param&nbsp;units:&nbsp;include&nbsp;units&nbsp;of&nbsp;measurement&nbsp;in&nbsp;descriptions&nbsp;if&nbsp;True<br>
+:return:&nbsp;description&nbsp;for&nbsp;selected&nbsp;column&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;a&nbsp;column&nbsp;or&nbsp;""&nbsp;if&nbsp;column&nbsp;is&nbsp;invalid,&nbsp;otherwise<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columns&nbsp;and&nbsp;descriptions&nbsp;dictionary</tt></dd></dl>
+ <dl><dt><a name="-get_station_data_dtypes"><strong>get_station_data_dtypes</strong></a>(column='')</dt><dd><tt>Returns&nbsp;data&nbsp;types&nbsp;for&nbsp;station&nbsp;data&nbsp;columns.<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;column&nbsp;name&nbsp;or&nbsp;""&nbsp;for&nbsp;all&nbsp;columns<br>
+:return:&nbsp;data&nbsp;type&nbsp;for&nbsp;selected&nbsp;column&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;a&nbsp;column&nbsp;or&nbsp;None&nbsp;if&nbsp;column&nbsp;is&nbsp;invalid,&nbsp;otherwise<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columns&nbsp;and&nbsp;data&nbsp;types&nbsp;dictionary</tt></dd></dl>
+ <dl><dt><a name="-join_directory_and_file_path"><strong>join_directory_and_file_path</strong></a>(file, directory='', make=False)</dt><dd><tt>Joins&nbsp;directory&nbsp;and&nbsp;file&nbsp;paths&nbsp;together&nbsp;if&nbsp;joined&nbsp;path&nbsp;is&nbsp;valid.<br>
+&nbsp;<br>
+:param&nbsp;file:&nbsp;file&nbsp;name&nbsp;or&nbsp;absolute&nbsp;path<br>
+:param&nbsp;directory:&nbsp;file&nbsp;directory,&nbsp;if&nbsp;""&nbsp;use&nbsp;root&nbsp;project&nbsp;directory,&nbsp;ignored&nbsp;if&nbsp;file&nbsp;parameter&nbsp;is&nbsp;absolute&nbsp;path<br>
+:param&nbsp;make:&nbsp;make&nbsp;selected&nbsp;directory&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;exist&nbsp;and&nbsp;don't&nbsp;check&nbsp;if&nbsp;file&nbsp;exists&nbsp;if&nbsp;True<br>
+:return:&nbsp;joined&nbsp;path&nbsp;if&nbsp;make&nbsp;parameter&nbsp;is&nbsp;False&nbsp;and&nbsp;file&nbsp;exists&nbsp;or&nbsp;if&nbsp;make&nbsp;parameter&nbsp;is&nbsp;True&nbsp;and&nbsp;directory&nbsp;exists,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""&nbsp;otherwise&nbsp;(if&nbsp;file&nbsp;parameter&nbsp;is&nbsp;an&nbsp;absolute&nbsp;path&nbsp;then&nbsp;it's&nbsp;split&nbsp;into&nbsp;directory&nbsp;and&nbsp;file&nbsp;for&nbsp;validation)</tt></dd></dl>
+ <dl><dt><a name="-join_file"><strong>join_file</strong></a>(*parts, **options)</dt><dd><tt>Joins&nbsp;file&nbsp;parts&nbsp;together.<br>
+&nbsp;<br>
+:param&nbsp;parts:&nbsp;file&nbsp;parts&nbsp;to&nbsp;join&nbsp;together<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;options,&nbsp;default&nbsp;values&nbsp;in&nbsp;()&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sep"&nbsp;string&nbsp;to&nbsp;add&nbsp;separator&nbsp;of&nbsp;file&nbsp;parts&nbsp;(""),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ext"&nbsp;string&nbsp;to&nbsp;add&nbsp;file&nbsp;extension&nbsp;(""),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"convert"&nbsp;boolean&nbsp;to&nbsp;convert&nbsp;parts&nbsp;to&nbsp;strings&nbsp;before&nbsp;joining&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;conversion&nbsp;formats&nbsp;see&nbsp;convert_args_to_strings&nbsp;documentation&nbsp;for&nbsp;options<br>
+:return:&nbsp;joined&nbsp;file&nbsp;or&nbsp;""&nbsp;if&nbsp;joining&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-join_path"><strong>join_path</strong></a>(*parts, **options)</dt><dd><tt>Joins&nbsp;path&nbsp;parts&nbsp;together.<br>
+&nbsp;<br>
+:param&nbsp;parts:&nbsp;path&nbsp;parts&nbsp;to&nbsp;join&nbsp;together<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;options,&nbsp;default&nbsp;values&nbsp;in&nbsp;()&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"cwd"&nbsp;boolean&nbsp;to&nbsp;add&nbsp;current&nbsp;working&nbsp;directory&nbsp;at&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;path&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"cwdp"&nbsp;boolean&nbsp;to&nbsp;add&nbsp;current&nbsp;working&nbsp;directory's&nbsp;parent&nbsp;directory&nbsp;at&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;path&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"root"&nbsp;boolean&nbsp;to&nbsp;add&nbsp;project&nbsp;root&nbsp;(utils.py&nbsp;location)&nbsp;at&nbsp;the&nbsp;start&nbsp;of&nbsp;path&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"osroot"&nbsp;boolean&nbsp;to&nbsp;add&nbsp;filesystem&nbsp;root&nbsp;at&nbsp;the&nbsp;start&nbsp;of&nbsp;path&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"norm"&nbsp;boolean&nbsp;to&nbsp;normalize&nbsp;joined&nbsp;path&nbsp;(True),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"convert"&nbsp;boolean&nbsp;to&nbsp;convert&nbsp;parts&nbsp;to&nbsp;strings&nbsp;before&nbsp;joining&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;conversion&nbsp;formats&nbsp;see&nbsp;convert_args_to_strings&nbsp;documentation&nbsp;for&nbsp;options<br>
+:return:&nbsp;joined&nbsp;path&nbsp;or&nbsp;""&nbsp;if&nbsp;joining&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-make_directory"><strong>make_directory</strong></a>(directory)</dt><dd><tt>Makes&nbsp;selected&nbsp;directory&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;exist.<br>
+&nbsp;<br>
+:param&nbsp;directory:&nbsp;directory&nbsp;to&nbsp;make</tt></dd></dl>
+ <dl><dt><a name="-read_config_options"><strong>read_config_options</strong></a>(networks_config=False, stations_config=False, datetimes_config=False)</dt><dd><tt>Reads&nbsp;selected&nbsp;options&nbsp;from&nbsp;config&nbsp;files.<br>
+&nbsp;<br>
+:param&nbsp;networks_config:&nbsp;get&nbsp;network&nbsp;list&nbsp;from&nbsp;network&nbsp;config&nbsp;file&nbsp;if&nbsp;True<br>
+:param&nbsp;stations_config:&nbsp;get&nbsp;station&nbsp;list&nbsp;from&nbsp;station&nbsp;config&nbsp;file&nbsp;if&nbsp;True<br>
+:param&nbsp;datetimes_config:&nbsp;get&nbsp;datetime&nbsp;list&nbsp;with&nbsp;Timestamp&nbsp;objects&nbsp;from&nbsp;datetimes&nbsp;config&nbsp;file&nbsp;if&nbsp;True<br>
+:return:&nbsp;config&nbsp;options&nbsp;dictionary&nbsp;of&nbsp;lists&nbsp;or&nbsp;config&nbsp;options&nbsp;list&nbsp;if&nbsp;only&nbsp;1&nbsp;parameter&nbsp;is&nbsp;True,&nbsp;with&nbsp;None&nbsp;where<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-read_data_from_file"><strong>read_data_from_file</strong></a>(file, directory='', reading='', **options)</dt><dd><tt>Reads&nbsp;data&nbsp;from&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;file:&nbsp;file&nbsp;name&nbsp;or&nbsp;absolute&nbsp;path<br>
+:param&nbsp;directory:&nbsp;file&nbsp;directory,&nbsp;if&nbsp;""&nbsp;use&nbsp;current&nbsp;working&nbsp;directory<br>
+:param&nbsp;reading:&nbsp;data&nbsp;structure&nbsp;being&nbsp;read&nbsp;from&nbsp;file&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;if&nbsp;"list",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;if&nbsp;"dict",&nbsp;"json",&nbsp;or&nbsp;"JSON",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unpickled&nbsp;object&nbsp;if&nbsp;"pickle",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unpickled&nbsp;joblib&nbsp;object/model&nbsp;if&nbsp;"joblib"&nbsp;or&nbsp;"sklearn",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tslearn&nbsp;model&nbsp;if&nbsp;"tslearn",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataFrame&nbsp;if&nbsp;"df",&nbsp;"dataframe",&nbsp;"DataFrame",&nbsp;"csv",&nbsp;or&nbsp;"CSV",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ndarray&nbsp;if&nbsp;"ndarray"&nbsp;or&nbsp;"array",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image&nbsp;if&nbsp;"image",&nbsp;"png",&nbsp;"PNG",&nbsp;"jpg",&nbsp;or&nbsp;"JPG",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;if&nbsp;"string"&nbsp;or&nbsp;"str",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infer&nbsp;parameter&nbsp;if&nbsp;""&nbsp;(DataFrame&nbsp;for&nbsp;.csv&nbsp;or&nbsp;.CSV&nbsp;files,&nbsp;dictionary&nbsp;for&nbsp;".json"&nbsp;or&nbsp;".JSON",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unpickled&nbsp;object&nbsp;for&nbsp;".pickle",&nbsp;unpickled&nbsp;joblib&nbsp;object&nbsp;for&nbsp;".joblib"&nbsp;or&nbsp;".sklearn",&nbsp;image&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".png",&nbsp;".PNG",&nbsp;".jpg",&nbsp;".JPG",&nbsp;".jpeg",&nbsp;or&nbsp;".JPEG",&nbsp;string&nbsp;for&nbsp;".html",&nbsp;otherwise&nbsp;list)<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;options,&nbsp;default&nbsp;values&nbsp;in&nbsp;()&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;list&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"end"&nbsp;string&nbsp;to&nbsp;separate&nbsp;items&nbsp;in&nbsp;file&nbsp;(newline),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sep"&nbsp;string&nbsp;to&nbsp;separate&nbsp;values&nbsp;in&nbsp;items&nbsp;for&nbsp;2D&nbsp;lists&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lstrip"&nbsp;string&nbsp;characters&nbsp;to&nbsp;strip&nbsp;from&nbsp;the&nbsp;left&nbsp;of&nbsp;each&nbsp;item&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"rstrip"&nbsp;string&nbsp;characters&nbsp;to&nbsp;strip&nbsp;from&nbsp;the&nbsp;right&nbsp;of&nbsp;each&nbsp;item&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"empty"&nbsp;boolean&nbsp;to&nbsp;add&nbsp;empty&nbsp;items&nbsp;to&nbsp;data&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dim2"&nbsp;boolean&nbsp;to&nbsp;make&nbsp;each&nbsp;item&nbsp;a&nbsp;list,&nbsp;even&nbsp;if&nbsp;singular&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"encoding"&nbsp;string&nbsp;to&nbsp;choose&nbsp;encoding&nbsp;for&nbsp;reading&nbsp;("utf-8")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;dictionary&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"loads"&nbsp;boolean&nbsp;to&nbsp;use&nbsp;json.loads&nbsp;on&nbsp;read&nbsp;file&nbsp;instead&nbsp;of&nbsp;using&nbsp;json.load&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"encoding"&nbsp;string&nbsp;to&nbsp;choose&nbsp;encoding&nbsp;for&nbsp;reading&nbsp;("utf-8"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see&nbsp;json.load&nbsp;and&nbsp;json.loads&nbsp;documentation&nbsp;for&nbsp;additional&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;pickled&nbsp;object&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"encoding"&nbsp;string&nbsp;to&nbsp;choose&nbsp;encoding&nbsp;for&nbsp;reading&nbsp;("utf-8"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see&nbsp;pickle.load&nbsp;documentation&nbsp;for&nbsp;additional&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;joblib&nbsp;pickled&nbsp;object&nbsp;see&nbsp;joblib.load&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;tslearn&nbsp;model&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type"&nbsp;string&nbsp;to&nbsp;select&nbsp;file&nbsp;type,&nbsp;"pickle"&nbsp;for&nbsp;pickled,&nbsp;"json"&nbsp;for&nbsp;JSON,&nbsp;"hdf5"&nbsp;for&nbsp;HDF5&nbsp;if&nbsp;h5py&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;installed&nbsp;("pickle")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"mclass"&nbsp;object&nbsp;to&nbsp;select&nbsp;object&nbsp;class&nbsp;read&nbsp;from&nbsp;file&nbsp;(None)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;a&nbsp;DataFrame&nbsp;see&nbsp;pandas.read_csv&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;reading&nbsp;an&nbsp;ndarray&nbsp;see&nbsp;numpy.loadtxt&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;readin&nbsp;an&nbsp;image&nbsp;see&nbsp;matplotlib.pyplot.imread&nbsp;for&nbsp;options<br>
+:return:&nbsp;file&nbsp;data&nbsp;or&nbsp;None&nbsp;if&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-read_fire_info"><strong>read_fire_info</strong></a>(networks=None, main_columns=False, start_datetime=None, end_datetime=None, min_spread=0)</dt><dd><tt>Reads&nbsp;selected&nbsp;fire&nbsp;info&nbsp;from&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;network&nbsp;code,&nbsp;latitude,&nbsp;longitude,&nbsp;spread,&nbsp;start&nbsp;date&nbsp;and&nbsp;end&nbsp;date&nbsp;columns&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;minimum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;maximum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;min_spread:&nbsp;minimum&nbsp;fire&nbsp;spread&nbsp;in&nbsp;hectares&nbsp;for&nbsp;info<br>
+:return:&nbsp;fire&nbsp;info&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-read_network_info"><strong>read_network_info</strong></a>(networks=None, main_columns=False)</dt><dd><tt>Reads&nbsp;network&nbsp;info&nbsp;from&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;network&nbsp;code&nbsp;column&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:return:&nbsp;network&nbsp;info&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-read_station_data"><strong>read_station_data</strong></a>(station, start_datetime, end_datetime, column='', network='', category='fetched', subcategory='', main_columns=False, set_index_column='valid')</dt><dd><tt>Reads&nbsp;station&nbsp;data&nbsp;from&nbsp;files.<br>
+&nbsp;<br>
+Station&nbsp;data&nbsp;files&nbsp;are&nbsp;saved&nbsp;under&nbsp;./data/[network]/[station]/[category]/&nbsp;for&nbsp;fetched&nbsp;and&nbsp;modeled&nbsp;data&nbsp;and<br>
+./data/[network]/[station]/[category]/[subcategory]/&nbsp;for&nbsp;preprocessed&nbsp;data.<br>
+&nbsp;<br>
+The&nbsp;names&nbsp;of&nbsp;the&nbsp;files&nbsp;are&nbsp;[station]_[start_datetime]_[end_datetime].csv&nbsp;and<br>
+[station]_[start_datetime]_[end_datetime]_[column].csv&nbsp;for&nbsp;column&nbsp;specific&nbsp;data.<br>
+&nbsp;<br>
+Brackets&nbsp;above&nbsp;reference&nbsp;function&nbsp;parameter&nbsp;values,&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;values&nbsp;are&nbsp;in&nbsp;YYYYmmddHHMM<br>
+(year,&nbsp;month,&nbsp;day,&nbsp;hour,&nbsp;minute)&nbsp;format.<br>
+&nbsp;<br>
+:param&nbsp;station:&nbsp;station&nbsp;ID&nbsp;("ALL"&nbsp;for&nbsp;24h&nbsp;data&nbsp;from&nbsp;all&nbsp;stations)<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;column:&nbsp;column&nbsp;name&nbsp;to&nbsp;get&nbsp;a&nbsp;column&nbsp;specific&nbsp;data&nbsp;file&nbsp;(column&nbsp;specific&nbsp;data&nbsp;must&nbsp;exist&nbsp;for&nbsp;the&nbsp;combination<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;category&nbsp;and&nbsp;subcategory&nbsp;parameters)<br>
+:param&nbsp;network:&nbsp;station&nbsp;network&nbsp;code&nbsp;("ALL"&nbsp;for&nbsp;24h&nbsp;data&nbsp;from&nbsp;all&nbsp;stations),&nbsp;if&nbsp;""&nbsp;get&nbsp;network&nbsp;code&nbsp;from&nbsp;station<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&nbsp;file&nbsp;using&nbsp;station&nbsp;parameter<br>
+:param&nbsp;category:&nbsp;select&nbsp;kind&nbsp;of&nbsp;data&nbsp;being&nbsp;read&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fetched&nbsp;data&nbsp;if&nbsp;"fetched",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preprocessed&nbsp;data&nbsp;if&nbsp;"preprocessed",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modeled&nbsp;data&nbsp;if&nbsp;"modeled"<br>
+:param&nbsp;subcategory:&nbsp;used&nbsp;with&nbsp;category&nbsp;parameter&nbsp;to&nbsp;select&nbsp;king&nbsp;of&nbsp;data&nbsp;being&nbsp;read&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"preprocessed"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;if&nbsp;"clean"&nbsp;or&nbsp;"",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;MinMaxScaler&nbsp;if&nbsp;"scaled_minmax",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;StandardScaler&nbsp;if&nbsp;"scaled_standard"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(split&nbsp;column&nbsp;data&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"modeled"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;split&nbsp;clean&nbsp;data&nbsp;clustered&nbsp;using&nbsp;K-Means&nbsp;clustering&nbsp;with&nbsp;DTW&nbsp;if&nbsp;"kmeans_timeseries"<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column&nbsp;parameter&nbsp;is&nbsp;not&nbsp;a&nbsp;column&nbsp;name,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns&nbsp;(ignored&nbsp;if&nbsp;column<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"")<br>
+:param&nbsp;set_index_column:&nbsp;column&nbsp;name&nbsp;to&nbsp;set&nbsp;as&nbsp;index,&nbsp;if&nbsp;"valid"&nbsp;parse&nbsp;timestamp&nbsp;column&nbsp;as&nbsp;DatetimeIndex,&nbsp;if&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;don't&nbsp;set&nbsp;index&nbsp;from&nbsp;file&nbsp;columns<br>
+:return:&nbsp;station&nbsp;data&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-read_station_info"><strong>read_station_info</strong></a>(networks=None, stations=None, main_columns=False, start_datetime=None, end_datetime=None)</dt><dd><tt>Reads&nbsp;station&nbsp;info&nbsp;from&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID&nbsp;or&nbsp;station&nbsp;ID&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;stations<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;station&nbsp;ID&nbsp;and&nbsp;network&nbsp;code&nbsp;columns&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;minimum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;maximum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:return:&nbsp;station&nbsp;info&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;reading&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-remove_path_unit"><strong>remove_path_unit</strong></a>(path)</dt><dd><tt>Deletes&nbsp;storage&nbsp;unit&nbsp;(directory&nbsp;or&nbsp;file)&nbsp;for&nbsp;given&nbsp;path&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;<br>
+:param&nbsp;path:&nbsp;storage&nbsp;unit&nbsp;path</tt></dd></dl>
+ <dl><dt><a name="-write_data_to_file"><strong>write_data_to_file</strong></a>(data, file, directory='', **options)</dt><dd><tt>Writes&nbsp;data&nbsp;to&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;file&nbsp;data&nbsp;as&nbsp;list&nbsp;(1D&nbsp;or&nbsp;2D),&nbsp;dictionary,&nbsp;sklearn&nbsp;model,&nbsp;tslearn&nbsp;model,&nbsp;DataFrame,&nbsp;Series,&nbsp;ndarray,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figure,&nbsp;or&nbsp;map,&nbsp;otherwise&nbsp;handled&nbsp;as&nbsp;list&nbsp;if&nbsp;data&nbsp;type&nbsp;is&nbsp;supported<br>
+:param&nbsp;file:&nbsp;file&nbsp;name&nbsp;or&nbsp;absolute&nbsp;path<br>
+:param&nbsp;directory:&nbsp;file&nbsp;directory,&nbsp;if&nbsp;""&nbsp;use&nbsp;current&nbsp;working&nbsp;directory<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;options,&nbsp;default&nbsp;values&nbsp;in&nbsp;()&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;list&nbsp;(or&nbsp;converted&nbsp;list)&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"end"&nbsp;string&nbsp;to&nbsp;separate&nbsp;items&nbsp;in&nbsp;file&nbsp;(newline),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sep"&nbsp;string&nbsp;to&nbsp;separate&nbsp;values&nbsp;in&nbsp;items&nbsp;for&nbsp;2D&nbsp;lists&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lstrip"&nbsp;string&nbsp;characters&nbsp;to&nbsp;strip&nbsp;from&nbsp;the&nbsp;left&nbsp;of&nbsp;each&nbsp;item&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"rstrip"&nbsp;string&nbsp;characters&nbsp;to&nbsp;strip&nbsp;from&nbsp;the&nbsp;right&nbsp;of&nbsp;each&nbsp;item&nbsp;("&nbsp;"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"convert"&nbsp;boolean&nbsp;to&nbsp;convert&nbsp;list&nbsp;items&nbsp;to&nbsp;strings&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"encoding"&nbsp;string&nbsp;to&nbsp;choose&nbsp;encoding&nbsp;for&nbsp;writing&nbsp;("utf-8")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;dictionary&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dumps"&nbsp;boolean&nbsp;to&nbsp;use&nbsp;json.dumps&nbsp;to&nbsp;write&nbsp;a&nbsp;string&nbsp;instead&nbsp;of&nbsp;using&nbsp;json.dump&nbsp;(False),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"encoding"&nbsp;string&nbsp;to&nbsp;choose&nbsp;encoding&nbsp;for&nbsp;writing&nbsp;("utf-8"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see&nbsp;json.dump&nbsp;and&nbsp;json.dumps&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;an&nbsp;sklearn&nbsp;model&nbsp;see&nbsp;joblib.dump&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;tslearn&nbsp;model&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type"&nbsp;string&nbsp;to&nbsp;select&nbsp;file&nbsp;type,&nbsp;"pickle"&nbsp;for&nbsp;pickled,&nbsp;"json"&nbsp;for&nbsp;JSON,&nbsp;"hdf5"&nbsp;for&nbsp;HDF5&nbsp;if&nbsp;h5py&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;installed&nbsp;("pickle")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;DataFrame&nbsp;see&nbsp;pandas.DataFrame.to_csv&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;Series&nbsp;see&nbsp;pandas.Series.to_csv&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;ndarray&nbsp;see&nbsp;numpy.savetxt&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;Figure&nbsp;see&nbsp;matplotlib.pyplot.savefig&nbsp;documentation&nbsp;for&nbsp;options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;writing&nbsp;a&nbsp;Map&nbsp;see&nbsp;folium.Map.save&nbsp;documentation&nbsp;for&nbsp;options</tt></dd></dl>
+ <dl><dt><a name="-write_fire_info"><strong>write_fire_info</strong></a>(fire_info, networks=None, main_columns=False, index_column=False, start_datetime=None, end_datetime=None, min_spread=0)</dt><dd><tt>Writes&nbsp;fire&nbsp;info&nbsp;to&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;fire_info:&nbsp;fire&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;network&nbsp;code,&nbsp;latitude,&nbsp;longitude,&nbsp;spread,&nbsp;start&nbsp;date&nbsp;and&nbsp;end&nbsp;date&nbsp;columns&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:param&nbsp;index_column:&nbsp;include&nbsp;index&nbsp;column&nbsp;if&nbsp;True<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;minimum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;maximum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;min_spread:&nbsp;minimum&nbsp;fire&nbsp;spread&nbsp;in&nbsp;hectares&nbsp;for&nbsp;info</tt></dd></dl>
+ <dl><dt><a name="-write_network_info"><strong>write_network_info</strong></a>(network_info, networks=None, main_columns=False, index_column=False)</dt><dd><tt>Writes&nbsp;network&nbsp;info&nbsp;to&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;network_info:&nbsp;network&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;network&nbsp;code&nbsp;column&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:param&nbsp;index_column:&nbsp;include&nbsp;index&nbsp;column&nbsp;if&nbsp;True</tt></dd></dl>
+ <dl><dt><a name="-write_station_data"><strong>write_station_data</strong></a>(station_data, station, start_datetime, end_datetime, column='', network='', category='fetched', subcategory='', main_columns=False, index_column=True)</dt><dd><tt>Writes&nbsp;station&nbsp;data&nbsp;from&nbsp;files.<br>
+&nbsp;<br>
+Station&nbsp;data&nbsp;files&nbsp;are&nbsp;saved&nbsp;under&nbsp;./data/[network]/[station]/[category]/&nbsp;for&nbsp;fetched&nbsp;and&nbsp;modeled&nbsp;data&nbsp;and<br>
+./data/[network]/[station]/[category]/[subcategory]/&nbsp;for&nbsp;preprocessed&nbsp;data.<br>
+&nbsp;<br>
+The&nbsp;names&nbsp;of&nbsp;the&nbsp;files&nbsp;are&nbsp;[station]_[start_datetime]_[end_datetime].csv&nbsp;and<br>
+[station]_[start_datetime]_[end_datetime]_[column].csv&nbsp;for&nbsp;column&nbsp;specific&nbsp;data.<br>
+&nbsp;<br>
+Brackets&nbsp;above&nbsp;reference&nbsp;function&nbsp;parameter&nbsp;values,&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;values&nbsp;are&nbsp;in&nbsp;YYYYmmddHHMM<br>
+(year,&nbsp;month,&nbsp;day,&nbsp;hour,&nbsp;minute)&nbsp;format.<br>
+&nbsp;<br>
+:param&nbsp;station_data:&nbsp;station&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;station:&nbsp;station&nbsp;ID&nbsp;("ALL"&nbsp;for&nbsp;24h&nbsp;data&nbsp;from&nbsp;all&nbsp;stations)<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;column:&nbsp;column&nbsp;name&nbsp;to&nbsp;indicate&nbsp;writing&nbsp;a&nbsp;column&nbsp;specific&nbsp;data&nbsp;file<br>
+:param&nbsp;network:&nbsp;station&nbsp;network&nbsp;code&nbsp;("ALL"&nbsp;for&nbsp;24h&nbsp;data&nbsp;from&nbsp;all&nbsp;stations),&nbsp;if&nbsp;""&nbsp;get&nbsp;network&nbsp;code&nbsp;from&nbsp;station<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&nbsp;file&nbsp;using&nbsp;station&nbsp;parameter<br>
+:param&nbsp;category:&nbsp;select&nbsp;kind&nbsp;of&nbsp;data&nbsp;being&nbsp;written&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fetched&nbsp;data&nbsp;if&nbsp;"fetched",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preprocessed&nbsp;data&nbsp;if&nbsp;"preprocessed",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modeled&nbsp;data&nbsp;if&nbsp;"modeled"<br>
+:param&nbsp;subcategory:&nbsp;used&nbsp;with&nbsp;category&nbsp;parameter&nbsp;to&nbsp;select&nbsp;kind&nbsp;of&nbsp;data&nbsp;being&nbsp;written&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"preprocessed"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;if&nbsp;"clean"&nbsp;or&nbsp;"",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;MinMaxScaler&nbsp;if&nbsp;"scaled_minmax",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;StandardScaler&nbsp;if&nbsp;"scaled_standard"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(split&nbsp;column&nbsp;data&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"modeled"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;split&nbsp;clean&nbsp;data&nbsp;clustered&nbsp;using&nbsp;K-Means&nbsp;clustering&nbsp;with&nbsp;DTW&nbsp;if&nbsp;"kmeans_timeseries"<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column&nbsp;parameter&nbsp;is&nbsp;not&nbsp;a&nbsp;column&nbsp;name,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns&nbsp;(ignored&nbsp;if&nbsp;column<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"")<br>
+:param&nbsp;index_column:&nbsp;include&nbsp;index&nbsp;column&nbsp;if&nbsp;True</tt></dd></dl>
+ <dl><dt><a name="-write_station_info"><strong>write_station_info</strong></a>(station_info, networks=None, stations=None, main_columns=False, index_column=False, start_datetime=None, end_datetime=None)</dt><dd><tt>Writes&nbsp;station&nbsp;info&nbsp;to&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;station_info:&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code&nbsp;or&nbsp;network&nbsp;code&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;networks<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID&nbsp;or&nbsp;station&nbsp;ID&nbsp;list&nbsp;to&nbsp;select&nbsp;info&nbsp;from&nbsp;stations<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;station&nbsp;ID&nbsp;and&nbsp;network&nbsp;code&nbsp;columns&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;include&nbsp;all&nbsp;columns<br>
+:param&nbsp;index_column:&nbsp;include&nbsp;index&nbsp;column&nbsp;if&nbsp;True<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;minimum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;info&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;maximum&nbsp;pandas&nbsp;Timestamp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ignored&nbsp;if&nbsp;start_datetime&nbsp;and&nbsp;end_datetime&nbsp;parameters&nbsp;are&nbsp;None)</tt></dd></dl>
+</td></tr></table>
+</body></html>

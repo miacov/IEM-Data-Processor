@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module modeling</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>modeling</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cmodeling.py">c:\users\marios\pycharmprojects\iem_data_processor\modeling.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="utils.html">utils</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cluster_and_output_station_data"><strong>cluster_and_output_station_data</strong></a>(start_datetime, end_datetime, stations, clusters=5, new_model=False)</dt><dd><tt>Clusters&nbsp;split&nbsp;clean&nbsp;station&nbsp;data&nbsp;and&nbsp;outputs&nbsp;the&nbsp;clusters&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+Clustered&nbsp;data&nbsp;includes&nbsp;each&nbsp;column&nbsp;clustered&nbsp;into&nbsp;clusters&nbsp;using&nbsp;K-Means&nbsp;clustering&nbsp;with&nbsp;DTW&nbsp;(Dynamic&nbsp;Time<br>
+Warping).<br>
+&nbsp;<br>
+Columns&nbsp;clustered&nbsp;are&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,<br>
+sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;clusters:&nbsp;number&nbsp;of&nbsp;clusters<br>
+:param&nbsp;new_model:&nbsp;create&nbsp;new&nbsp;default&nbsp;tslearn&nbsp;TimeSeriesKMeans&nbsp;models&nbsp;(one&nbsp;for&nbsp;each&nbsp;split&nbsp;clean&nbsp;data&nbsp;file),&nbsp;fit&nbsp;each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;a&nbsp;supported&nbsp;split&nbsp;clean&nbsp;data&nbsp;column,&nbsp;and&nbsp;output&nbsp;them&nbsp;to&nbsp;files&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;use&nbsp;existing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;models&nbsp;from&nbsp;files&nbsp;if&nbsp;the&nbsp;files&nbsp;exist&nbsp;to&nbsp;cluster&nbsp;columns</tt></dd></dl>
+ <dl><dt><a name="-cluster_kmeans_data"><strong>cluster_kmeans_data</strong></a>(data, model='kmeans', get_model=False, **options)</dt><dd><tt>Clusters&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;column&nbsp;features&nbsp;if&nbsp;model&nbsp;parameter&nbsp;is&nbsp;sklearn&nbsp;KMeans,&nbsp;with&nbsp;time&nbsp;series&nbsp;as&nbsp;rows&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;parameter&nbsp;is&nbsp;tslearn&nbsp;TimeSeriesKMeans<br>
+:param&nbsp;model:&nbsp;sklearn&nbsp;KMeans&nbsp;or&nbsp;tslearn&nbsp;TimeSeriesKMeans&nbsp;model&nbsp;or&nbsp;"kmeans"&nbsp;to&nbsp;make&nbsp;new&nbsp;KMeans&nbsp;model&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"kmeans_timeseries"&nbsp;to&nbsp;make&nbsp;new&nbsp;TimeSeriesKMeans&nbsp;model<br>
+:param&nbsp;get_model:&nbsp;return&nbsp;clustering&nbsp;model&nbsp;with&nbsp;clustered&nbsp;data&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;return&nbsp;only&nbsp;clustered&nbsp;data<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;clustering&nbsp;options,&nbsp;see&nbsp;sklearn.cluster.KMeans&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tslearn.clustering.TimeSeriesKMeans&nbsp;documentation<br>
+:return:&nbsp;clustered&nbsp;data&nbsp;DataFrame&nbsp;or&nbsp;None&nbsp;if&nbsp;clustering&nbsp;data&nbsp;or&nbsp;fitting&nbsp;new&nbsp;model&nbsp;failed,&nbsp;and&nbsp;additionally&nbsp;the&nbsp;new<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;(clustered&nbsp;data,&nbsp;model)&nbsp;or&nbsp;None&nbsp;if&nbsp;clustering&nbsp;data&nbsp;or&nbsp;fitting&nbsp;new&nbsp;model&nbsp;failed&nbsp;(None,&nbsp;None)&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get_model&nbsp;parameter&nbsp;is&nbsp;True</tt></dd></dl>
+ <dl><dt><a name="-fit_kmeans"><strong>fit_kmeans</strong></a>(data, model='kmeans', get_centers=False, **options)</dt><dd><tt>Fits&nbsp;K-Means&nbsp;clustering&nbsp;model&nbsp;to&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;column&nbsp;features&nbsp;if&nbsp;model&nbsp;parameter&nbsp;is&nbsp;sklearn&nbsp;KMeans,&nbsp;with&nbsp;time&nbsp;series&nbsp;as&nbsp;rows&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;parameter&nbsp;is&nbsp;tslearn&nbsp;TimeSeriesKMeans<br>
+:param&nbsp;model:&nbsp;sklearn&nbsp;KMeans&nbsp;or&nbsp;tslearn&nbsp;TimeSeriesKMeans&nbsp;model&nbsp;or&nbsp;"kmeans"&nbsp;to&nbsp;make&nbsp;new&nbsp;KMeans&nbsp;model&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"kmeans_timeseries"&nbsp;to&nbsp;make&nbsp;new&nbsp;TimeSeriesKMeans&nbsp;model<br>
+:param&nbsp;get_centers:&nbsp;return&nbsp;cluster&nbsp;center&nbsp;DataFrame&nbsp;with&nbsp;clustered&nbsp;data&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;return&nbsp;only&nbsp;clustered<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;clustering&nbsp;options,&nbsp;see&nbsp;sklearn.cluster.KMeans&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tslearn.clustering.TimeSeriesKMeans&nbsp;documentation<br>
+:return:&nbsp;fitted&nbsp;clustering&nbsp;model&nbsp;or&nbsp;None&nbsp;if&nbsp;making&nbsp;or&nbsp;fitting&nbsp;new&nbsp;model&nbsp;failed,&nbsp;and&nbsp;additionally&nbsp;the&nbsp;cluster&nbsp;centers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataFrame&nbsp;(model,&nbsp;clusters)&nbsp;or&nbsp;None&nbsp;if&nbsp;making&nbsp;or&nbsp;fitting&nbsp;new&nbsp;model&nbsp;failed&nbsp;(None,&nbsp;None)&nbsp;if&nbsp;get_centers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;is&nbsp;True</tt></dd></dl>
+</td></tr></table>
+</body></html>

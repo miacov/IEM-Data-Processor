@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module plotting</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>plotting</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cplotting.py">c:\users\marios\pycharmprojects\iem_data_processor\plotting.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="matplotlib.cm.html">matplotlib.cm</a><br>
+<a href="matplotlib.dates.html">matplotlib.dates</a><br>
+<a href="matplotlib.patches.html">matplotlib.patches</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="pandas.html">pandas</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="seaborn.html">seaborn</a><br>
+<a href="utils.html">utils</a><br>
+<a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-make_and_output_station_data_plots"><strong>make_and_output_station_data_plots</strong></a>(start_datetime, end_datetime, stations, category='fetched', subcategory='', main_columns=False, display=False)</dt><dd><tt>Makes&nbsp;station&nbsp;data&nbsp;plot&nbsp;figures&nbsp;and&nbsp;outputs&nbsp;them&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;category:&nbsp;select&nbsp;kind&nbsp;of&nbsp;data&nbsp;being&nbsp;plotted&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fetched&nbsp;data&nbsp;if&nbsp;"fetched"&nbsp;(make&nbsp;distribution&nbsp;and&nbsp;time&nbsp;plot&nbsp;figures&nbsp;for&nbsp;all&nbsp;features&nbsp;selected<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;main_columns&nbsp;parameter),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preprocessed&nbsp;data&nbsp;if&nbsp;"preprocessed"&nbsp;(make&nbsp;plot&nbsp;figures&nbsp;according&nbsp;to&nbsp;subcategory&nbsp;parameter),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modeled&nbsp;data&nbsp;if&nbsp;"modeled"&nbsp;(make&nbsp;plot&nbsp;figures&nbsp;according&nbsp;to&nbsp;subcategory&nbsp;parameter)<br>
+:param&nbsp;subcategory:&nbsp;used&nbsp;with&nbsp;category&nbsp;parameter&nbsp;to&nbsp;select&nbsp;kind&nbsp;of&nbsp;data&nbsp;being&nbsp;plotted&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"preprocessed"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;if&nbsp;"clean"&nbsp;or&nbsp;""&nbsp;(make&nbsp;distribution&nbsp;and&nbsp;time&nbsp;data&nbsp;plot&nbsp;figures&nbsp;for&nbsp;all&nbsp;features),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;MinMaxScaler&nbsp;if&nbsp;"scaled_minmax"&nbsp;(make&nbsp;distribution&nbsp;and&nbsp;time&nbsp;plot&nbsp;figures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;all&nbsp;features&nbsp;selected&nbsp;with&nbsp;main_columns&nbsp;parameter),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clean&nbsp;data&nbsp;scaled&nbsp;with&nbsp;StandardScaler&nbsp;if&nbsp;"scaled_standard"&nbsp;(make&nbsp;distribution&nbsp;and&nbsp;time&nbsp;plot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figures&nbsp;for&nbsp;all&nbsp;features&nbsp;selected&nbsp;with&nbsp;main_columns&nbsp;parameter)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;category&nbsp;parameter&nbsp;is&nbsp;"modeled"&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;split&nbsp;clean&nbsp;data&nbsp;clustered&nbsp;using&nbsp;K-Means&nbsp;clustering&nbsp;with&nbsp;DTW&nbsp;if&nbsp;"kmeans_timeseries"&nbsp;(make&nbsp;time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;cluster&nbsp;plot&nbsp;figures&nbsp;for&nbsp;all&nbsp;features)<br>
+:param&nbsp;main_columns:&nbsp;plot&nbsp;only&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,&nbsp;sky&nbsp;level&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True&nbsp;otherwise<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additionally&nbsp;plot&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;coverage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns&nbsp;(if&nbsp;they&nbsp;exist&nbsp;in&nbsp;read&nbsp;data&nbsp;file,&nbsp;ignored&nbsp;if&nbsp;category<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"fetched"&nbsp;or&nbsp;"preprocessed")<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figures&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)</tt></dd></dl>
+ <dl><dt><a name="-make_data_plots"><strong>make_data_plots</strong></a>(data, distribution_plots=True, time_plots=True, descriptions=None, display=True, get=False, style='seaborn-darkgrid')</dt><dd><tt>Makes&nbsp;plot&nbsp;figures&nbsp;for&nbsp;data&nbsp;columns&nbsp;to&nbsp;visualize&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;distribution_plots:&nbsp;make&nbsp;distribution&nbsp;plot&nbsp;figures&nbsp;if&nbsp;True<br>
+:param&nbsp;time_plots:&nbsp;make&nbsp;time&nbsp;(trend&nbsp;and&nbsp;seasonality)&nbsp;plot&nbsp;figures&nbsp;if&nbsp;True<br>
+:param&nbsp;descriptions:&nbsp;dictionary&nbsp;with&nbsp;column&nbsp;descriptions&nbsp;to&nbsp;add&nbsp;to&nbsp;plot&nbsp;figure&nbsp;titles&nbsp;after&nbsp;column&nbsp;names,&nbsp;if&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;no&nbsp;descriptions<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figures&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figures&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figures&nbsp;and&nbsp;return&nbsp;None<br>
+:param&nbsp;style:&nbsp;style&nbsp;name&nbsp;for&nbsp;plot&nbsp;figures<br>
+:return:&nbsp;plot&nbsp;figures&nbsp;dictionary&nbsp;of&nbsp;dictionaries&nbsp;(column&nbsp;plot&nbsp;figure&nbsp;for&nbsp;each&nbsp;plot&nbsp;type),&nbsp;plot&nbsp;figures&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;only&nbsp;1&nbsp;type&nbsp;of&nbsp;plots&nbsp;is&nbsp;selected,&nbsp;or&nbsp;None&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;False</tt></dd></dl>
+ <dl><dt><a name="-make_distribution_plot"><strong>make_distribution_plot</strong></a>(column, data=None, description='', display=True, get=False, style='seaborn-darkgrid')</dt><dd><tt>Makes&nbsp;plot&nbsp;figure&nbsp;to&nbsp;visualize&nbsp;data&nbsp;distribution.<br>
+&nbsp;<br>
+Figure&nbsp;includes&nbsp;a&nbsp;count&nbsp;plot&nbsp;for&nbsp;missing&nbsp;values,&nbsp;a&nbsp;histogram&nbsp;plot,&nbsp;and&nbsp;a&nbsp;box&nbsp;plot&nbsp;(if&nbsp;column&nbsp;is&nbsp;numeric).<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;column&nbsp;of&nbsp;column&nbsp;parameter&nbsp;included&nbsp;(used&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:param&nbsp;description:&nbsp;description&nbsp;to&nbsp;add&nbsp;to&nbsp;plot&nbsp;figure&nbsp;title&nbsp;after&nbsp;column&nbsp;name,&nbsp;if&nbsp;""&nbsp;add&nbsp;no&nbsp;description<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figure&nbsp;and&nbsp;return&nbsp;None<br>
+:param&nbsp;style:&nbsp;style&nbsp;name&nbsp;for&nbsp;plot&nbsp;figure<br>
+:return:&nbsp;plot&nbsp;figure&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;True&nbsp;or&nbsp;None&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;False&nbsp;or&nbsp;required&nbsp;column&nbsp;data&nbsp;is&nbsp;not&nbsp;given</tt></dd></dl>
+ <dl><dt><a name="-make_lowess_plot"><strong>make_lowess_plot</strong></a>(column, smooth_column, data=None, description='LOWESS', display=True, get=False, style='seaborn-darkgrid')</dt><dd><tt>Makes&nbsp;plot&nbsp;figure&nbsp;to&nbsp;visualize&nbsp;data&nbsp;smoothed&nbsp;with&nbsp;LOWESS&nbsp;(Locally&nbsp;Weighted&nbsp;Scatterplot&nbsp;Smoothing).<br>
+&nbsp;<br>
+Figure&nbsp;includes&nbsp;a&nbsp;plot&nbsp;with&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;for&nbsp;values&nbsp;before&nbsp;smoothing&nbsp;and&nbsp;a&nbsp;line&nbsp;plot&nbsp;for&nbsp;values&nbsp;after&nbsp;smoothing.<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;smooth_column:&nbsp;smooth&nbsp;value&nbsp;Series&nbsp;or&nbsp;smooth&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;columns&nbsp;of&nbsp;column&nbsp;and&nbsp;smooth_column&nbsp;parameters&nbsp;included&nbsp;(used&nbsp;if&nbsp;column&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smooth_column&nbsp;parameter&nbsp;are&nbsp;names)<br>
+:param&nbsp;description:&nbsp;description&nbsp;to&nbsp;add&nbsp;to&nbsp;plot&nbsp;figure&nbsp;title&nbsp;after&nbsp;column&nbsp;name,&nbsp;if&nbsp;""&nbsp;add&nbsp;no&nbsp;description<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figure&nbsp;and&nbsp;return&nbsp;None<br>
+:param&nbsp;style:&nbsp;style&nbsp;name&nbsp;for&nbsp;plot&nbsp;figure<br>
+:return:&nbsp;plot&nbsp;figure&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;True&nbsp;or&nbsp;None&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;False&nbsp;or&nbsp;required&nbsp;column&nbsp;data&nbsp;is&nbsp;not&nbsp;given</tt></dd></dl>
+ <dl><dt><a name="-make_plot_from_image"><strong>make_plot_from_image</strong></a>(image, dpi=100.0, display=True, get=False)</dt><dd><tt>Makes&nbsp;plot&nbsp;figure&nbsp;from&nbsp;plot&nbsp;figure&nbsp;image.<br>
+&nbsp;<br>
+:param&nbsp;image:&nbsp;image&nbsp;array<br>
+:param&nbsp;dpi:&nbsp;image&nbsp;DPI&nbsp;used&nbsp;when&nbsp;saving&nbsp;the&nbsp;image&nbsp;before&nbsp;reading&nbsp;it<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figure&nbsp;and&nbsp;return&nbsp;None<br>
+:return:</tt></dd></dl>
+ <dl><dt><a name="-make_time_plot"><strong>make_time_plot</strong></a>(column, data=None, description='', display=True, get=False, style='seaborn-darkgrid')</dt><dd><tt>Makes&nbsp;plot&nbsp;figure&nbsp;to&nbsp;visualize&nbsp;data&nbsp;trend&nbsp;and&nbsp;seasonality.<br>
+&nbsp;<br>
+Figure&nbsp;includes&nbsp;a&nbsp;line&nbsp;plot&nbsp;for&nbsp;data&nbsp;over&nbsp;time,&nbsp;a&nbsp;line&nbsp;plot&nbsp;and&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;for&nbsp;monthly&nbsp;data,&nbsp;and&nbsp;grouped&nbsp;plots<br>
+for&nbsp;monthly&nbsp;and&nbsp;quarterly&nbsp;data&nbsp;(if&nbsp;downsampled&nbsp;data&nbsp;doesn't&nbsp;have&nbsp;missing&nbsp;values&nbsp;and&nbsp;all&nbsp;months&nbsp;are&nbsp;available).<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;with&nbsp;Timestamp&nbsp;index&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;column&nbsp;of&nbsp;column&nbsp;parameter&nbsp;included&nbsp;(used&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:param&nbsp;description:&nbsp;description&nbsp;to&nbsp;add&nbsp;to&nbsp;plot&nbsp;figure&nbsp;title&nbsp;after&nbsp;column&nbsp;name,&nbsp;if&nbsp;""&nbsp;add&nbsp;no&nbsp;description<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figure&nbsp;and&nbsp;return&nbsp;None<br>
+:param&nbsp;style:&nbsp;style&nbsp;name&nbsp;for&nbsp;plot&nbsp;figure<br>
+:return:&nbsp;plot&nbsp;figure&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;True&nbsp;or&nbsp;None&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;False&nbsp;or&nbsp;required&nbsp;column&nbsp;data&nbsp;is&nbsp;not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given,&nbsp;not&nbsp;numeric,&nbsp;or&nbsp;has&nbsp;only&nbsp;missing&nbsp;values&nbsp;or&nbsp;column&nbsp;index&nbsp;isn't&nbsp;only&nbsp;dates</tt></dd></dl>
+ <dl><dt><a name="-make_timeseries_cluster_plot"><strong>make_timeseries_cluster_plot</strong></a>(column, model, data=None, split_data=None, index=None, description='', display=True, get=False, style='seaborn-darkgrid')</dt><dd><tt>Makes&nbsp;plot&nbsp;figure&nbsp;to&nbsp;visualize&nbsp;time&nbsp;series&nbsp;clusters.<br>
+&nbsp;<br>
+Figure&nbsp;includes&nbsp;a&nbsp;plot&nbsp;for&nbsp;every&nbsp;cluster&nbsp;with&nbsp;cluster&nbsp;centers&nbsp;and&nbsp;clustered&nbsp;samples&nbsp;belonging&nbsp;to&nbsp;each&nbsp;center<br>
+and&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;with&nbsp;clustered&nbsp;samples&nbsp;on&nbsp;data&nbsp;over&nbsp;time&nbsp;(clustered&nbsp;samples&nbsp;and&nbsp;scatter&nbsp;plot&nbsp;only&nbsp;plotted&nbsp;if<br>
+split&nbsp;column&nbsp;data&nbsp;is&nbsp;given).<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;cluster&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;model:&nbsp;fitted&nbsp;clustering&nbsp;model<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;column&nbsp;of&nbsp;column&nbsp;parameter&nbsp;included&nbsp;(used&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:param&nbsp;split_data:&nbsp;split&nbsp;column&nbsp;DataFrame&nbsp;with&nbsp;time&nbsp;series&nbsp;rows,&nbsp;if&nbsp;None&nbsp;plot&nbsp;only&nbsp;cluster&nbsp;centers<br>
+:param&nbsp;index:&nbsp;index&nbsp;for&nbsp;rows&nbsp;of&nbsp;stacked&nbsp;split_data&nbsp;parameter&nbsp;DataFrame&nbsp;(original&nbsp;data&nbsp;before&nbsp;splitting),&nbsp;if&nbsp;None&nbsp;use<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default&nbsp;index&nbsp;after&nbsp;stacking&nbsp;(used&nbsp;if&nbsp;split_data&nbsp;parameter&nbsp;is&nbsp;not&nbsp;None)<br>
+:param&nbsp;description:&nbsp;description&nbsp;to&nbsp;add&nbsp;to&nbsp;plot&nbsp;figure&nbsp;title&nbsp;after&nbsp;column&nbsp;name,&nbsp;if&nbsp;""&nbsp;add&nbsp;no&nbsp;description<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True&nbsp;(disable&nbsp;plot&nbsp;window&nbsp;to&nbsp;avoid&nbsp;errors&nbsp;when&nbsp;plot&nbsp;limit&nbsp;is&nbsp;reached)<br>
+:param&nbsp;get:&nbsp;return&nbsp;plot&nbsp;figure&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;close&nbsp;created&nbsp;plot&nbsp;figure&nbsp;and&nbsp;return&nbsp;None<br>
+:param&nbsp;style:&nbsp;style&nbsp;name&nbsp;for&nbsp;plot&nbsp;figure<br>
+:return:&nbsp;plot&nbsp;figure&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;True&nbsp;or&nbsp;None&nbsp;if&nbsp;get&nbsp;parameter&nbsp;is&nbsp;False&nbsp;or&nbsp;required&nbsp;column&nbsp;data&nbsp;is&nbsp;not&nbsp;given</tt></dd></dl>
+</td></tr></table>
+</body></html>

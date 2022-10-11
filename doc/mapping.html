@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module mapping</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>mapping</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cmapping.py">c:\users\marios\pycharmprojects\iem_data_processor\mapping.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="folium.html">folium</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="utils.html">utils</a><br>
+</td><td width="25%" valign=top><a href="utm.html">utm</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-convert_utm_to_latlon"><strong>convert_utm_to_latlon</strong></a>(zone_number, column_x, column_y, data=None, zone_letter='', northern=True)</dt><dd><tt>Converts&nbsp;UTM&nbsp;(Universal&nbsp;Transverse&nbsp;Mercator)&nbsp;x&nbsp;(easting)&nbsp;and&nbsp;y&nbsp;(northing)&nbsp;coordinates&nbsp;to&nbsp;latitude&nbsp;and&nbsp;longitude.<br>
+&nbsp;<br>
+:param&nbsp;zone_number:&nbsp;zone&nbsp;number&nbsp;(1-60)<br>
+:param&nbsp;column_x:&nbsp;x&nbsp;coordinate&nbsp;Series&nbsp;or&nbsp;x&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;column_y:&nbsp;y&nbsp;coordinate&nbsp;Series&nbsp;or&nbsp;y&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;with&nbsp;columns&nbsp;of&nbsp;column_x&nbsp;and&nbsp;column_y&nbsp;parameters&nbsp;included&nbsp;(used&nbsp;if&nbsp;column_x&nbsp;or&nbsp;column_y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;are&nbsp;names)<br>
+:param&nbsp;zone_letter:&nbsp;zone&nbsp;letter&nbsp;(uses&nbsp;northern&nbsp;parameter&nbsp;if&nbsp;"")<br>
+:param&nbsp;northern:&nbsp;northern&nbsp;hemisphere&nbsp;if&nbsp;True&nbsp;(ignored&nbsp;if&nbsp;zone_letter&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"")<br>
+:return:&nbsp;converted&nbsp;latitude&nbsp;and&nbsp;longitude&nbsp;DataFrame&nbsp;if&nbsp;column_x&nbsp;and&nbsp;column_y&nbsp;parameter&nbsp;are&nbsp;Series,&nbsp;data&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataFrame&nbsp;with&nbsp;converted&nbsp;latitude&nbsp;and&nbsp;longitude&nbsp;columns&nbsp;added&nbsp;and&nbsp;previous&nbsp;columns&nbsp;dropped&nbsp;if&nbsp;data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;is&nbsp;not&nbsp;None,&nbsp;or&nbsp;None&nbsp;if&nbsp;converting&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-draw_circle"><strong>draw_circle</strong></a>(info, group, datetime_to_year=False, spread_as_radius=False)</dt><dd><tt>Draws&nbsp;a&nbsp;circle&nbsp;overlay&nbsp;with&nbsp;an&nbsp;info&nbsp;popup.<br>
+&nbsp;<br>
+:param&nbsp;info:&nbsp;Series&nbsp;with&nbsp;values&nbsp;for&nbsp;circle&nbsp;center&nbsp;(latitude&nbsp;as&nbsp;"lat",&nbsp;"latitude"&nbsp;and&nbsp;longitude&nbsp;as&nbsp;"lon",&nbsp;"long",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lng",&nbsp;or&nbsp;"longitude"),&nbsp;radius&nbsp;("radius"&nbsp;or&nbsp;"spread"&nbsp;if&nbsp;spread_as_radius&nbsp;if&nbsp;parameter&nbsp;is&nbsp;True),&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additional&nbsp;info&nbsp;for&nbsp;popup<br>
+:param&nbsp;group:&nbsp;folium&nbsp;layer&nbsp;overlay&nbsp;or&nbsp;Map&nbsp;object&nbsp;to&nbsp;add&nbsp;circle&nbsp;to<br>
+:param&nbsp;datetime_to_year:&nbsp;convert&nbsp;datetime&nbsp;info&nbsp;Series&nbsp;values&nbsp;to&nbsp;year&nbsp;values&nbsp;if&nbsp;True<br>
+:param&nbsp;spread_as_radius:&nbsp;use&nbsp;"spread"&nbsp;Series&nbsp;value&nbsp;converted&nbsp;from&nbsp;hectares&nbsp;to&nbsp;a&nbsp;radius&nbsp;for&nbsp;circle&nbsp;radius&nbsp;if&nbsp;True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;use&nbsp;"radius"&nbsp;value&nbsp;(if&nbsp;selected&nbsp;value&nbsp;is&nbsp;missing&nbsp;then&nbsp;radius&nbsp;is&nbsp;set&nbsp;to&nbsp;1&nbsp;meter)</tt></dd></dl>
+ <dl><dt><a name="-draw_circlemarker"><strong>draw_circlemarker</strong></a>(info, group, datetime_to_year=False)</dt><dd><tt>Draws&nbsp;a&nbsp;circle&nbsp;marker&nbsp;overlay&nbsp;with&nbsp;an&nbsp;info&nbsp;popup.<br>
+&nbsp;<br>
+:param&nbsp;info:&nbsp;Series&nbsp;with&nbsp;values&nbsp;for&nbsp;marker&nbsp;center&nbsp;(latitude&nbsp;as&nbsp;"lat",&nbsp;"latitude"&nbsp;and&nbsp;longitude&nbsp;as&nbsp;"lon",&nbsp;"long",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lng",&nbsp;or&nbsp;"longitude")&nbsp;and&nbsp;additional&nbsp;info&nbsp;for&nbsp;popup<br>
+:param&nbsp;group:&nbsp;folium&nbsp;layer&nbsp;overlay&nbsp;or&nbsp;Map&nbsp;object&nbsp;to&nbsp;add&nbsp;marker&nbsp;to<br>
+:param&nbsp;datetime_to_year:&nbsp;convert&nbsp;datetime&nbsp;info&nbsp;Series&nbsp;values&nbsp;to&nbsp;year&nbsp;values&nbsp;if&nbsp;True<br>
+:return:</tt></dd></dl>
+ <dl><dt><a name="-draw_polyline"><strong>draw_polyline</strong></a>(info, group, suffixes=None)</dt><dd><tt>Draws&nbsp;a&nbsp;line&nbsp;overlay&nbsp;between&nbsp;two&nbsp;points.<br>
+&nbsp;<br>
+:param&nbsp;info:&nbsp;Series&nbsp;with&nbsp;values&nbsp;for&nbsp;point&nbsp;coordinates&nbsp;(latitude&nbsp;as&nbsp;"lat",&nbsp;"latitude"&nbsp;and&nbsp;longitude&nbsp;as&nbsp;"lon",&nbsp;"long",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lng",&nbsp;or&nbsp;"longitude"&nbsp;with&nbsp;suffixes&nbsp;if&nbsp;suffixes&nbsp;parameter&nbsp;is&nbsp;not&nbsp;None)<br>
+:param&nbsp;group:&nbsp;folium&nbsp;layer&nbsp;overlay&nbsp;or&nbsp;Map&nbsp;object<br>
+:param&nbsp;suffixes:&nbsp;suffixes&nbsp;turple&nbsp;or&nbsp;list&nbsp;to&nbsp;differentiate&nbsp;point&nbsp;columns&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;first&nbsp;2&nbsp;info&nbsp;Series&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;point&nbsp;1&nbsp;and&nbsp;last&nbsp;2&nbsp;values&nbsp;for&nbsp;point&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-get_html_table"><strong>get_html_table</strong></a>(info, datetime_to_year=False)</dt><dd><tt>Makes&nbsp;an&nbsp;HTML&nbsp;table&nbsp;string&nbsp;from&nbsp;info&nbsp;values.<br>
+&nbsp;<br>
+:param&nbsp;info:&nbsp;Series&nbsp;with&nbsp;info&nbsp;values<br>
+:param&nbsp;datetime_to_year:&nbsp;convert&nbsp;datetime&nbsp;info&nbsp;Series&nbsp;values&nbsp;to&nbsp;year&nbsp;values&nbsp;if&nbsp;True<br>
+:return:&nbsp;HTML&nbsp;table&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-make_and_output_network_info_maps"><strong>make_and_output_network_info_maps</strong></a>(start_datetime=None, end_datetime=None, networks=None, screenshot=False)</dt><dd><tt>Makes&nbsp;network&nbsp;info&nbsp;maps&nbsp;with&nbsp;stations&nbsp;and&nbsp;fires&nbsp;and&nbsp;outputs&nbsp;them&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;minimum&nbsp;pandas&nbsp;Timestamp<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object&nbsp;or&nbsp;None&nbsp;to&nbsp;use&nbsp;the&nbsp;maximum&nbsp;pandas&nbsp;Timestamp<br>
+:param&nbsp;networks:&nbsp;network&nbsp;code,&nbsp;network&nbsp;code&nbsp;list,&nbsp;or&nbsp;network&nbsp;info&nbsp;DataFrame&nbsp;to&nbsp;map&nbsp;each&nbsp;selected&nbsp;network&nbsp;in&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separate&nbsp;file,&nbsp;or&nbsp;None&nbsp;to&nbsp;map&nbsp;all&nbsp;available&nbsp;networks&nbsp;in&nbsp;one&nbsp;file<br>
+:param&nbsp;screenshot:&nbsp;take&nbsp;a&nbsp;screenshot&nbsp;of&nbsp;every&nbsp;created&nbsp;map&nbsp;and&nbsp;output&nbsp;it&nbsp;to&nbsp;file&nbsp;if&nbsp;True&nbsp;(no&nbsp;output&nbsp;if&nbsp;process&nbsp;times<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out)</tt></dd></dl>
+ <dl><dt><a name="-make_info_map"><strong>make_info_map</strong></a>(station_info=None, fire_info=None)</dt><dd><tt>Makes&nbsp;map&nbsp;to&nbsp;visualize&nbsp;station&nbsp;and&nbsp;fire&nbsp;locations.<br>
+&nbsp;<br>
+Map&nbsp;includes&nbsp;station&nbsp;location&nbsp;markers,&nbsp;fire&nbsp;location&nbsp;circles&nbsp;with&nbsp;spread,&nbsp;and&nbsp;lines&nbsp;connecting&nbsp;each&nbsp;fire&nbsp;with&nbsp;the<br>
+station&nbsp;nearest&nbsp;to&nbsp;it.<br>
+&nbsp;<br>
+:param&nbsp;station_info:&nbsp;station&nbsp;info&nbsp;DataFrame&nbsp;or&nbsp;GeoJSON&nbsp;dictionary<br>
+:param&nbsp;fire_info:&nbsp;fire&nbsp;info&nbsp;DataFrame<br>
+:return:&nbsp;map&nbsp;or&nbsp;None&nbsp;if&nbsp;station_info&nbsp;and&nbsp;fire_info&nbsp;parameters&nbsp;are&nbsp;both&nbsp;None&nbsp;or&nbsp;empty</tt></dd></dl>
+ <dl><dt><a name="-make_yearly_fire_info_map"><strong>make_yearly_fire_info_map</strong></a>(fire_info)</dt><dd><tt>Makes&nbsp;map&nbsp;to&nbsp;visualize&nbsp;fire&nbsp;locations&nbsp;for&nbsp;every&nbsp;year.<br>
+&nbsp;<br>
+Map&nbsp;includes&nbsp;fire&nbsp;location&nbsp;circles&nbsp;with&nbsp;spread.<br>
+&nbsp;<br>
+:param&nbsp;fire_info:&nbsp;fire&nbsp;info&nbsp;DataFrame<br>
+:return:&nbsp;map&nbsp;or&nbsp;None&nbsp;if&nbsp;fire_info&nbsp;parameter&nbsp;is&nbsp;None&nbsp;or&nbsp;empty</tt></dd></dl>
+</td></tr></table>
+</body></html>

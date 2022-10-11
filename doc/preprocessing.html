@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module preprocessing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>preprocessing</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmarios%5Cpycharmprojects%5Ciem_data_processor%5Cpreprocessing.py">c:\users\marios\pycharmprojects\iem_data_processor\preprocessing.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="plotting.html">plotting</a><br>
+</td><td width="25%" valign=top><a href="utils.html">utils</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-clean_and_output_station_data"><strong>clean_and_output_station_data</strong></a>(start_datetime, end_datetime, stations, main_columns=True)</dt><dd><tt>Cleans&nbsp;fetched&nbsp;station&nbsp;data&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+Clean&nbsp;station&nbsp;data&nbsp;is&nbsp;in&nbsp;hourly&nbsp;intervals,&nbsp;with&nbsp;empty&nbsp;and&nbsp;unimportant&nbsp;columns&nbsp;dropped,&nbsp;string&nbsp;columns&nbsp;encoded&nbsp;with<br>
+ordinal&nbsp;encoding,&nbsp;and&nbsp;cyclical&nbsp;columns&nbsp;encoded&nbsp;with&nbsp;cyclical&nbsp;encoding.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;additionally&nbsp;include&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;coverage&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns</tt></dd></dl>
+ <dl><dt><a name="-clean_station_data"><strong>clean_station_data</strong></a>(station_data, main_columns=True, frequency='H')</dt><dd><tt>Cleans&nbsp;station&nbsp;data.<br>
+&nbsp;<br>
+Drops&nbsp;unimportant&nbsp;columns,&nbsp;encodes&nbsp;string&nbsp;columns&nbsp;with&nbsp;ordinal&nbsp;encoding,&nbsp;encodes&nbsp;cyclical&nbsp;columns&nbsp;with&nbsp;cyclical<br>
+encoding,&nbsp;and&nbsp;resamples&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;station_data:&nbsp;station&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;additionally&nbsp;include&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;coverage&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns<br>
+:param&nbsp;frequency:&nbsp;frequency&nbsp;of&nbsp;samples&nbsp;for&nbsp;resampling<br>
+:return:&nbsp;preprocessed&nbsp;station&nbsp;data&nbsp;DataFrame</tt></dd></dl>
+ <dl><dt><a name="-encode_cyclical_column"><strong>encode_cyclical_column</strong></a>(max_value, column, data=None)</dt><dd><tt>Encodes&nbsp;a&nbsp;column&nbsp;with&nbsp;cyclical&nbsp;encoding&nbsp;(sine,&nbsp;cosine).<br>
+&nbsp;<br>
+:param&nbsp;max_value:&nbsp;column&nbsp;maximum&nbsp;value<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;(if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:return:&nbsp;encoded&nbsp;sine&nbsp;and&nbsp;cosine&nbsp;DataFrame&nbsp;if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;a&nbsp;Series,&nbsp;data&nbsp;parameter&nbsp;DataFrame&nbsp;with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encoded&nbsp;sine&nbsp;and&nbsp;cosine&nbsp;column&nbsp;columns&nbsp;added&nbsp;and&nbsp;previous&nbsp;column&nbsp;dropped&nbsp;if&nbsp;data&nbsp;parameter&nbsp;is&nbsp;not&nbsp;None,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;None&nbsp;if&nbsp;encoding&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-fit_scaler"><strong>fit_scaler</strong></a>(data, scaler='minmax', **options)</dt><dd><tt>Fits&nbsp;scaler&nbsp;to&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;scaler:&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;or&nbsp;StandardScaler&nbsp;model&nbsp;or&nbsp;"minmax"&nbsp;to&nbsp;make&nbsp;new&nbsp;MinMaxScaler&nbsp;model&nbsp;or&nbsp;"standard"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;make&nbsp;new&nbsp;StandardScaler&nbsp;model<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;scaling&nbsp;options,&nbsp;see&nbsp;sklearn.preprocessing.MinMaxScaler&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.StandardScaler&nbsp;documentation<br>
+:return:&nbsp;fitted&nbsp;scaler&nbsp;or&nbsp;None&nbsp;if&nbsp;making&nbsp;or&nbsp;fitting&nbsp;new&nbsp;scaler&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-preprocess_and_output_station_data"><strong>preprocess_and_output_station_data</strong></a>(start_datetime, end_datetime, stations, main_columns=True, split_columns='', scaler=None, new_scaler=False)</dt><dd><tt>Preprocesses&nbsp;fetched&nbsp;station&nbsp;data&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+Preprocessing&nbsp;consists&nbsp;of&nbsp;cleaning,&nbsp;scaling,&nbsp;and&nbsp;splitting&nbsp;data.&nbsp;Clean&nbsp;station&nbsp;data&nbsp;is&nbsp;in&nbsp;hourly&nbsp;intervals,&nbsp;with<br>
+empty&nbsp;and&nbsp;unimportant&nbsp;columns&nbsp;dropped,&nbsp;string&nbsp;columns&nbsp;encoded&nbsp;with&nbsp;ordinal&nbsp;encoding,&nbsp;and&nbsp;cyclical&nbsp;columns&nbsp;encoded<br>
+with&nbsp;cyclical&nbsp;encoding.&nbsp;After&nbsp;cleaning,&nbsp;data&nbsp;can&nbsp;also&nbsp;be&nbsp;scaled&nbsp;and&nbsp;columns&nbsp;can&nbsp;be&nbsp;are&nbsp;separately&nbsp;split&nbsp;into&nbsp;daily<br>
+time&nbsp;series&nbsp;if&nbsp;the&nbsp;appropriate&nbsp;parameters&nbsp;are&nbsp;selected.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;additionally&nbsp;include&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;coverage&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns<br>
+:param&nbsp;split_columns:&nbsp;data&nbsp;to&nbsp;split&nbsp;each&nbsp;data&nbsp;column&nbsp;of&nbsp;in&nbsp;daily&nbsp;time&nbsp;series,&nbsp;clean&nbsp;data&nbsp;if&nbsp;"clean",&nbsp;scaled&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;if&nbsp;"scaled"&nbsp;(scaled&nbsp;data&nbsp;selected&nbsp;with&nbsp;scaler&nbsp;parameter),&nbsp;both&nbsp;clean&nbsp;and&nbsp;scaled&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;if&nbsp;"all",&nbsp;otherwise&nbsp;no&nbsp;splitting<br>
+:param&nbsp;scaler:&nbsp;scaler&nbsp;or&nbsp;list&nbsp;of&nbsp;scalers&nbsp;to&nbsp;scale&nbsp;clean&nbsp;data,&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;model&nbsp;if&nbsp;"minmax",&nbsp;StandardScaler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;if&nbsp;"standard"<br>
+:param&nbsp;new_scaler:&nbsp;create&nbsp;a&nbsp;new&nbsp;default&nbsp;scaler&nbsp;for&nbsp;every&nbsp;scaler&nbsp;selected&nbsp;by&nbsp;the&nbsp;scaler&nbsp;parameter,&nbsp;fit&nbsp;it&nbsp;to&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data,&nbsp;and&nbsp;output&nbsp;it&nbsp;to&nbsp;file&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;use&nbsp;existing&nbsp;scaler&nbsp;from&nbsp;file&nbsp;(if&nbsp;the&nbsp;file&nbsp;exists)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;scale&nbsp;data&nbsp;(ignored&nbsp;if&nbsp;no&nbsp;valid&nbsp;scaler&nbsp;parameter&nbsp;is&nbsp;given)</tt></dd></dl>
+ <dl><dt><a name="-scale_and_output_station_data"><strong>scale_and_output_station_data</strong></a>(start_datetime, end_datetime, stations, main_columns=True, scaler=None, new_scaler=False)</dt><dd><tt>Scales&nbsp;clean&nbsp;station&nbsp;data&nbsp;and&nbsp;outputs&nbsp;it&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;additionally&nbsp;include&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;coverage&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns&nbsp;(if&nbsp;they&nbsp;exist&nbsp;in&nbsp;read&nbsp;clean&nbsp;data&nbsp;file)<br>
+:param&nbsp;scaler:&nbsp;scaler&nbsp;or&nbsp;list&nbsp;of&nbsp;scalers&nbsp;to&nbsp;scale&nbsp;clean&nbsp;data,&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;model&nbsp;if&nbsp;"minmax",&nbsp;StandardScaler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;if&nbsp;"standard"&nbsp;("minmax"&nbsp;selected&nbsp;if&nbsp;no&nbsp;scaler&nbsp;is&nbsp;given)<br>
+:param&nbsp;new_scaler:&nbsp;create&nbsp;a&nbsp;new&nbsp;default&nbsp;scaler&nbsp;for&nbsp;every&nbsp;scaler&nbsp;selected&nbsp;by&nbsp;the&nbsp;scaler&nbsp;parameter,&nbsp;fit&nbsp;it&nbsp;to&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data,&nbsp;and&nbsp;output&nbsp;it&nbsp;to&nbsp;file&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;use&nbsp;existing&nbsp;scaler&nbsp;from&nbsp;file&nbsp;(if&nbsp;the&nbsp;file&nbsp;exists)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;scale&nbsp;data&nbsp;(ignored&nbsp;if&nbsp;no&nbsp;valid&nbsp;scaler&nbsp;parameter&nbsp;is&nbsp;given)</tt></dd></dl>
+ <dl><dt><a name="-scale_data"><strong>scale_data</strong></a>(data, scaler='minmax', get_model=False, **options)</dt><dd><tt>Scales&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;scaler:&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;or&nbsp;StandardScaler&nbsp;model&nbsp;or&nbsp;"minmax"&nbsp;to&nbsp;make&nbsp;new&nbsp;MinMaxScaler&nbsp;model&nbsp;or&nbsp;"standard"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;make&nbsp;new&nbsp;StandardScaler&nbsp;model<br>
+:param&nbsp;get_model:&nbsp;return&nbsp;scaler&nbsp;with&nbsp;scaled&nbsp;data&nbsp;if&nbsp;True,&nbsp;otherwise&nbsp;return&nbsp;only&nbsp;scaled&nbsp;data<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;scaling&nbsp;options,&nbsp;see&nbsp;sklearn.preprocessing.MinMaxScaler&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.StandardScaler&nbsp;documentation<br>
+:return:&nbsp;scaled&nbsp;data&nbsp;DataFrame&nbsp;(only&nbsp;columns&nbsp;fitted&nbsp;are&nbsp;scaled)&nbsp;or&nbsp;None&nbsp;if&nbsp;scaling&nbsp;data&nbsp;or&nbsp;fitting&nbsp;new&nbsp;scaler&nbsp;failed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;additionally&nbsp;the&nbsp;new&nbsp;scaler&nbsp;(scaled&nbsp;data,&nbsp;scaler)&nbsp;or&nbsp;None&nbsp;if&nbsp;scaling&nbsp;data&nbsp;or&nbsp;fitting&nbsp;new&nbsp;scaler&nbsp;failed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(None,&nbsp;None)&nbsp;if&nbsp;get_model&nbsp;parameter&nbsp;is&nbsp;True</tt></dd></dl>
+ <dl><dt><a name="-smooth_lowess_column"><strong>smooth_lowess_column</strong></a>(column, data=None, display=False, **options)</dt><dd><tt>Smooths&nbsp;a&nbsp;column&nbsp;with&nbsp;LOWESS&nbsp;(Locally&nbsp;Weighted&nbsp;Scatterplot&nbsp;Smoothing)<br>
+&nbsp;<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;(if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:param&nbsp;display:&nbsp;display&nbsp;plot&nbsp;figure&nbsp;of&nbsp;column&nbsp;values&nbsp;before&nbsp;and&nbsp;after&nbsp;smoothing&nbsp;if&nbsp;True<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;smoothing&nbsp;options,&nbsp;see<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statsmodels.nonparametric.smoothers_lowess.lowess&nbsp;documentation<br>
+:return:&nbsp;smooth&nbsp;value&nbsp;Series</tt></dd></dl>
+ <dl><dt><a name="-split_and_output_station_data"><strong>split_and_output_station_data</strong></a>(start_datetime, end_datetime, stations, main_columns=True, split_columns='clean', scaler=None)</dt><dd><tt>Splits&nbsp;clean&nbsp;station&nbsp;data&nbsp;columns&nbsp;into&nbsp;daily&nbsp;time&nbsp;series&nbsp;and&nbsp;outputs&nbsp;them&nbsp;to&nbsp;files.<br>
+&nbsp;<br>
+Each&nbsp;data&nbsp;column&nbsp;is&nbsp;separately&nbsp;split&nbsp;into&nbsp;daily&nbsp;rows&nbsp;with&nbsp;24&nbsp;hourly&nbsp;columns.<br>
+&nbsp;<br>
+:param&nbsp;start_datetime:&nbsp;start&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;end_datetime:&nbsp;end&nbsp;datetime&nbsp;for&nbsp;data&nbsp;as&nbsp;Timestamp&nbsp;object<br>
+:param&nbsp;stations:&nbsp;station&nbsp;ID,&nbsp;station&nbsp;ID&nbsp;list,&nbsp;or&nbsp;station&nbsp;info&nbsp;DataFrame<br>
+:param&nbsp;main_columns:&nbsp;include&nbsp;only&nbsp;timestamp,&nbsp;temperature,&nbsp;dew&nbsp;point&nbsp;temperature,&nbsp;relative&nbsp;humidity,&nbsp;wind&nbsp;speed,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sky&nbsp;level&nbsp;1&nbsp;coverage&nbsp;code,&nbsp;sky&nbsp;level&nbsp;1&nbsp;altitude,&nbsp;and&nbsp;apparent&nbsp;temperature&nbsp;columns&nbsp;if&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;additionally&nbsp;include&nbsp;wind&nbsp;direction,&nbsp;precipitation,&nbsp;visibility,&nbsp;wind&nbsp;gust,&nbsp;sky&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;coverage&nbsp;codes,&nbsp;and&nbsp;sky&nbsp;level&nbsp;2-3&nbsp;altitude&nbsp;columns&nbsp;(if&nbsp;they&nbsp;exist&nbsp;in&nbsp;read&nbsp;clean&nbsp;data&nbsp;file)<br>
+:param&nbsp;split_columns:&nbsp;data&nbsp;to&nbsp;split&nbsp;each&nbsp;data&nbsp;column&nbsp;of&nbsp;in&nbsp;daily&nbsp;time&nbsp;series,&nbsp;clean&nbsp;data&nbsp;if&nbsp;"clean",&nbsp;scaled&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;if&nbsp;"scaled"&nbsp;(scaled&nbsp;data&nbsp;selected&nbsp;with&nbsp;scaler&nbsp;parameter),&nbsp;both&nbsp;clean&nbsp;and&nbsp;scaled&nbsp;clean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;if&nbsp;"all",&nbsp;otherwise&nbsp;no&nbsp;splitting<br>
+:param&nbsp;scaler:&nbsp;scaler&nbsp;or&nbsp;list&nbsp;of&nbsp;scalers&nbsp;that&nbsp;were&nbsp;used&nbsp;to&nbsp;scale&nbsp;clean&nbsp;data&nbsp;to&nbsp;get&nbsp;appropriate&nbsp;scaled&nbsp;data&nbsp;files&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;splitting,&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;model&nbsp;if&nbsp;"minmax",&nbsp;StandardScaler&nbsp;model&nbsp;if&nbsp;"standard"&nbsp;(ignored&nbsp;if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;split_columns&nbsp;parameter&nbsp;is&nbsp;not&nbsp;"scaled"&nbsp;or&nbsp;"all")</tt></dd></dl>
+ <dl><dt><a name="-split_column"><strong>split_column</strong></a>(split, column, data=None, index=None, smooth=False, scale=False, **options)</dt><dd><tt>Splits&nbsp;a&nbsp;column&nbsp;into&nbsp;rows&nbsp;with&nbsp;selected&nbsp;amount&nbsp;of&nbsp;columns.<br>
+&nbsp;<br>
+:param&nbsp;split:&nbsp;amount&nbsp;of&nbsp;columns&nbsp;each&nbsp;row&nbsp;will&nbsp;have&nbsp;after&nbsp;splitting<br>
+:param&nbsp;column:&nbsp;value&nbsp;Series&nbsp;or&nbsp;column&nbsp;name&nbsp;(requires&nbsp;data&nbsp;parameter&nbsp;to&nbsp;get&nbsp;value&nbsp;Series)<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame&nbsp;(if&nbsp;column&nbsp;parameter&nbsp;is&nbsp;name)<br>
+:param&nbsp;index:&nbsp;index&nbsp;for&nbsp;rows&nbsp;after&nbsp;splitting<br>
+:param&nbsp;smooth:&nbsp;smooth&nbsp;rows&nbsp;using&nbsp;LOWESS&nbsp;after&nbsp;splitting&nbsp;if&nbsp;True<br>
+:param&nbsp;scale:&nbsp;scale&nbsp;rows&nbsp;(after&nbsp;smoothing&nbsp;if&nbsp;smooth&nbsp;parameter&nbsp;is&nbsp;True)&nbsp;using&nbsp;sklearn&nbsp;MinMaxScaler&nbsp;or&nbsp;StandardScaler<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;True<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;options&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;smoothing&nbsp;see&nbsp;smooth_lowess_column&nbsp;documentation&nbsp;(display&nbsp;and&nbsp;options&nbsp;parameters)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;scaling&nbsp;see&nbsp;scale_data&nbsp;documentation&nbsp;(scaler&nbsp;and&nbsp;options&nbsp;parameters)<br>
+:return:&nbsp;split&nbsp;column&nbsp;DataFrame&nbsp;(smooth&nbsp;if&nbsp;smooth&nbsp;parameter&nbsp;is&nbsp;True,&nbsp;scaled&nbsp;if&nbsp;scale&nbsp;parameter&nbsp;is&nbsp;True,&nbsp;smooth&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scaled&nbsp;if&nbsp;both&nbsp;parameters&nbsp;are&nbsp;True,&nbsp;with&nbsp;index&nbsp;if&nbsp;index&nbsp;parameter&nbsp;is&nbsp;not&nbsp;None)&nbsp;or&nbsp;None&nbsp;if&nbsp;any<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transformation&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-split_train_test_data"><strong>split_train_test_data</strong></a>(data, labels=None, **options)</dt><dd><tt>Splits&nbsp;data&nbsp;into&nbsp;train&nbsp;set&nbsp;and&nbsp;test&nbsp;set,&nbsp;after&nbsp;separating&nbsp;feature&nbsp;and&nbsp;label&nbsp;columns.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;data&nbsp;DataFrame<br>
+:param&nbsp;labels:&nbsp;output&nbsp;labels<br>
+:param&nbsp;options:&nbsp;variable&nbsp;number&nbsp;of&nbsp;keyword&nbsp;arguments&nbsp;for&nbsp;splitting&nbsp;options,&nbsp;see<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sklearn.model_selection.train_test_split&nbsp;documentation<br>
+:return:&nbsp;train&nbsp;and&nbsp;test&nbsp;feature&nbsp;and&nbsp;label&nbsp;DataFrames&nbsp;(X&nbsp;train,&nbsp;X&nbsp;test,&nbsp;Y&nbsp;train,&nbsp;Y&nbsp;test)&nbsp;or&nbsp;train&nbsp;and&nbsp;test&nbsp;feature<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataFrames&nbsp;(X&nbsp;train,&nbsp;X&nbsp;test)&nbsp;if&nbsp;labels&nbsp;parameter&nbsp;is&nbsp;None</tt></dd></dl>
+</td></tr></table>
+</body></html>
